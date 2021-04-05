@@ -10,13 +10,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ExpandedSideBar from "./ExpandedSideBar";
 export default class SideSideBar extends Component {
+  onHover = () => {
+    let expandedSideBar = document.getElementById("ExpandedSideBar");
+    expandedSideBar.classList.remove("Display");
+  };
   render() {
     return (
       <div className="Sidebar">
         <div className="Title">
           <FontAwesomeIcon icon={faDatabase} />
         </div>
-        <div className="Links">
+        <div className="Links" onMouseOver={this.onHover}>
           <div className="Element">
             <FontAwesomeIcon icon={faHome} />
           </div>

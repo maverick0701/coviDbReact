@@ -37,6 +37,7 @@ body {
   margin-bottom: 50px;
   color: rgb(128, 128, 128);
   font-size: 22px;
+  cursor: pointer;
 }
 #End {
   position: absolute;

@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export default class ExpandedSideBar extends Component {
   render() {
     return (
-      <div className="Expand Display">
+      <div className="Expand Display" id="ExpandedSideBar">
         <div className="Links">
           <div className="Element expandedList">Home</div>
           <div className="Element expandedList">About Us</div>
