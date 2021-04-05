@@ -1,48 +1,17 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --navColor: #1e1e30;
+  --backColor: #161726;
+  --fontColor1: white;
+  --fontFam1: "Open Sans Condensed", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
-  background-color: #161726;
+  background-color: var(--backColor);
 }
 
 .Sidebar {
-  background-color: #1e1e30 !important;
+  background-color: var(--navColor) !important;
   height: 100vh;
   position: fixed;
   left: 0%;
@@ -77,3 +46,38 @@ body {
 #Globe {
   font-size: 30px;
 }
+
+.Expand {
+  background-color: var(--navColor);
+  display: block;
+  height: 100vh;
+  width: 210%;
+  position: absolute;
+  left: 10%;
+  top: 0%;
+  color: var(--fontColor1);
+  font-family: var(--fontFam1);
+  z-index: -1;
+  animation-name: expandSideBar;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.Display {
+  display: none;
+}
+.expandedList {
+  font-size: 18px;
+}
+@keyframes expandSideBar {
+  from {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(54px);
+  }
+}
+/* 
+.Sidebar:hover .Expand {
+  display: block;
+  cursor: pointer;
+} */

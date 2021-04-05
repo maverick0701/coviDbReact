@@ -8,6 +8,7 @@ import {
   faHome,
   faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
+import ExpandedSideBar from "./ExpandedSideBar";
 export default class SideSideBar extends Component {
   render() {
     return (
@@ -34,6 +35,7 @@ export default class SideSideBar extends Component {
             <FontAwesomeIcon icon={faGlobe} />
           </div>
         </div>
+        <ExpandedSideBar />
       </div>
     );
   }
