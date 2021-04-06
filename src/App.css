@@ -50,33 +50,45 @@ body {
 
 .Expand {
   background-color: var(--navColor);
-  display: block;
+  display: none;
   height: 100vh;
-  width: 210%;
+  width: 254%;
   position: absolute;
-  left: 10%;
-  top: 0%;
+  left: 0%;
+  top: -1%;
   color: var(--fontColor1);
   font-family: var(--fontFam1);
   z-index: -1;
-  animation-name: expandSideBar;
+  /* animation-name: expandSideBar;
+  animation-duration: 2s;
+  animation-fill-mode: both; */
+}
+/* .Display {
+  animation-name: collapseSideBar;
   animation-duration: 2s;
   animation-fill-mode: both;
-}
-.Display {
-  display: none;
+ 
 }
 .expandedList {
   font-size: 18px;
-}
+} */
 @keyframes expandSideBar {
   from {
-    transform: translateX(10px);
+    transform: translateX(9px);
   }
   to {
     transform: translateX(54px);
   }
 }
+@keyframes collapseSideBar {
+  from {
+    transform: translateX(54px);
+  }
+  to {
+    transform: translateX(-4px);
+  }
+}
+
 /* 
 .Sidebar:hover .Expand {
   display: block;

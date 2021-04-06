@@ -1,3 +1,3 @@
 import Sidebar from "./Sidebar";
-
-export { Sidebar };
+import Screen from "./Screen";
+export { Sidebar, Screen };

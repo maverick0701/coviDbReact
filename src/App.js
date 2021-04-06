@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { Sidebar } from "./components/index";
+import { Sidebar, Screen } from "./components/index";
 import "./App.css";
 class App extends Component {
   render() {
-    return <Sidebar />;
+    return (
+      <div>
+        <Sidebar />
+        <Screen />
+      </div>
+    );
   }
 }
 

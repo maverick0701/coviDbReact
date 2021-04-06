@@ -11,9 +11,23 @@ import {
 import ExpandedSideBar from "./ExpandedSideBar";
 export default class SideSideBar extends Component {
   onHover = () => {
-    let expandedSideBar = document.getElementById("ExpandedSideBar");
-    expandedSideBar.classList.remove("Display");
+    let elem = document.getElementById("ExpandedSideBar");
+    let pos = 0;
+
+    if (elem.style.display !== "block") {
+      elem.style.display = "block";
+      function animate() {
+        if (pos === 100) {
+          clearInterval(id);
+        } else {
+          pos = pos + 10;
+          elem.style.left = pos + "%";
+        }
+      }
+      let id = setInterval(animate, 10);
+    }
   };
+
   render() {
     return (
       <div className="Sidebar">
