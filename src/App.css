@@ -94,3 +94,16 @@ body {
   display: block;
   cursor: pointer;
 } */
+
+.Table {
+  color: aliceblue;
+  font-size: 40px;
+}
+.Screen {
+  position: absolute;
+  left: 10%;
+  height: 100vh;
+  width: 85%;
+  border: 2px solid wheat;
+  z-index: -2;
+}
