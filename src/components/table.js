@@ -2,7 +2,19 @@ import React, { Component } from "react";
 
 class table extends Component {
   render() {
-    return <div className="Table">Table</div>;
+    let { data } = this.props;
+    let index = Object.keys(data);
+    console.log(index);
+
+    index.pop();
+
+    return (
+      <tr>
+        {index.map((key) => (
+          <td>{data[key]}</td>
+        ))}
+      </tr>
+    );
   }
 }
 
