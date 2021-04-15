@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Table from "./table";
+import Map from "./map";
 import { getStateData } from "../actions/getState";
 class Screen extends Component {
   componentDidMount() {
@@ -13,25 +14,28 @@ class Screen extends Component {
     if (this.props.state.state.data) {
       datas = this.props.state.state.data.finalDataArray;
       console.log(datas);
-      keys = Object.keys(this.props.state.state.data.finalDataArray[0]);
+      // Object.keys(this.props.state.state.data.finalDataArray[0]);
+      keys = ["State", "Confirmed", "Recovered", "Deaths", "Active"];
       keys.pop();
     }
     return (
       <div>
         {this.props.state.state.data && (
           <div className="Screen">
-            <table className="styled-table">
-              <tr>
-                {keys.map((key) => (
-                  <th>{key}</th>
-                ))}
-              </tr>
-              {datas.map((data) => (
-                <Table data={data} />
+            <div className="tableHeader">
+              {keys.map((key) => (
+                <div className="tableContent">
+                  <div className="tableContentHead" id={key}>
+                    {key}
+                  </div>
+                </div>
               ))}
-            </table>
+            </div>
           </div>
         )}
+        <div>
+          <Map />
+        </div>
       </div>
     );
   }
@@ -46,3 +50,8 @@ function mapStateToProps(state) {
 const connectedScreenComponent = connect(mapStateToProps)(Screen);
 
 export default connectedScreenComponent;
+{
+  /* {datas.map((data) => (
+                <Table data={data} />
+              ))} */
+}
