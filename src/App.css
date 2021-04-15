@@ -126,7 +126,9 @@ body {
   margin: auto;
   position: relative;
   top: 20%;
-  left: 20%;
+  left: 8%;
+  height: 50px;
+  overflow-x: hidden;
 }
 #Confirmed,
 #Recovered {
@@ -141,4 +143,21 @@ path {
   position: absolute;
   right: 1%;
   top: 7%;
+}
+.table-body {
+  display: flex;
+}
+.table-body-data {
+  top: 0%;
+  left: 0%;
+  font-size: 16px;
+}
+#tableScreen {
+  height: 75vh;
+  position: absolute;
+  top: 8%;
+}
+#contentInTable {
+  height: 75vh;
+  overflow: scroll;
 }

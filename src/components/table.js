@@ -2,18 +2,18 @@ import React, { Component } from "react";
 
 class table extends Component {
   render() {
-    let { data } = this.props;
-    let index; //= Object.keys(data);
-    index = ["State", "Confirmed", "Recovered", "Deaths", "Active"];
-
-    index.pop();
+    const { keys, data } = this.props;
 
     return (
-      <tr>
-        {index.map((key) => (
-          <td>{data[key]}</td>
+      <div className="table-body">
+        {keys.map((key) => (
+          <div className="tableContent table-body-content">
+            <div className="tableContentHead table-body-data" id={key}>
+              {data[key]}
+            </div>
+          </div>
         ))}
-      </tr>
+      </div>
     );
   }
 }
