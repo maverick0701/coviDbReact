@@ -6,6 +6,7 @@ export default class Charts extends Component {
     super();
     this.state = {
       data: [],
+      labels: [],
     };
   }
   componentDidMount() {
@@ -22,32 +23,48 @@ export default class Charts extends Component {
         data = res.data.data.data;
         // console.log(data);
         let resp = [];
+        let labels = [];
         data.map((elem) => {
           resp.push(elem["Total Confirmed"]);
+          labels.push(elem["Date"].split(" ")[1]);
         });
         this.setState({
           data: resp,
+          labels,
         });
       });
   }
   render() {
     // const labels = Utils.months({ count: 7 });
     const data = this.state.data;
-    console.log(data, "hihi");
+    const labels = this.state.labels;
+    // console.log(data, "hihi");
     return (
       <div className="Charts">
         <Line
           data={{
-            labels: ["jam", "fev", "march", "april", "may", "june"],
+            labels: labels,
             datasets: [
               {
-                label: "My First Dataset",
+                label: "Total Confirmed",
                 data: data,
                 fill: false,
                 borderColor: "rgb(75, 192, 192)",
                 tension: 0.1,
               },
             ],
+            // options: {
+            //   scales: {
+            //     x: {
+            //       type: "time",
+            //       time: {
+            //         displayFormats: {
+            //           quarter: "MMM YYYY",
+            //         },
+            //       },
+            //     },
+            //   },
+            // },
           }}
         />
       </div>
