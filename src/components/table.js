@@ -8,7 +8,11 @@ class table extends Component {
       <div className="table-body">
         {keys.map((key) => (
           <div className="tableContent table-body-content">
-            <div className="tableContentHead table-body-data" id={key}>
+            <div
+              className="tableContentHead table-body-data"
+              id={key}
+              key={key}
+            >
               {data[key]}
             </div>
           </div>

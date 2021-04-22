@@ -96,6 +96,8 @@ body {
 } */
 
 .Screen {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   left: 10%;
   height: 100vh;
@@ -160,4 +162,8 @@ path {
 #contentInTable {
   height: 75vh;
   overflow: scroll;
+}
+.Charts {
+  position: absolute;
+  top: 100vh;
 }
