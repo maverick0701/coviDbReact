@@ -14,6 +14,7 @@ class Screen extends Component {
   componentDidMount() {
     this.props.dispatch(getStateData());
     this.props.dispatch(getCaseTimeSeries("India"));
+    console.log("cmd inside");
   }
 
   render() {

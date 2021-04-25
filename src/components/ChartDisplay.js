@@ -8,20 +8,22 @@ export default class chartDisplay extends Component {
     let { data, labels, title } = this.props;
     return (
       <div>
-        <Line
-          data={{
-            labels: labels,
-            datasets: [
-              {
-                label: title,
-                data: data,
-                fill: false,
-                borderColor: "rgb(75, 192, 192)",
-                tension: 0.1,
-              },
-            ],
-          }}
-        />
+        {labels !== undefined && (
+          <Line
+            data={{
+              labels: labels,
+              datasets: [
+                {
+                  label: title,
+                  data: data,
+                  fill: false,
+                  borderColor: "rgb(75, 192, 192)",
+                  tension: 0.1,
+                },
+              ],
+            }}
+          />
+        )}
       </div>
     );
   }
