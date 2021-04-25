@@ -143,8 +143,8 @@ path {
 
 .map {
   position: absolute;
-  right: 1%;
-  top: 7%;
+  left: 20%;
+  top: 110vh;
 }
 .table-body {
   display: flex;
@@ -165,5 +165,9 @@ path {
 }
 .Charts {
   position: absolute;
-  top: 100vh;
+  top: 10%;
+  left: 58%;
+  /* border: 2px solid white; */
+  height: 60vh;
+  width: 40%;
 }

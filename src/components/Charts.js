@@ -41,32 +41,34 @@ export default class Charts extends Component {
     // console.log(data, "hihi");
     return (
       <div className="Charts">
-        <Line
-          data={{
-            labels: labels,
-            datasets: [
-              {
-                label: "Total Confirmed",
-                data: data,
-                fill: false,
-                borderColor: "rgb(75, 192, 192)",
-                tension: 0.1,
-              },
-            ],
-            // options: {
-            //   scales: {
-            //     x: {
-            //       type: "time",
-            //       time: {
-            //         displayFormats: {
-            //           quarter: "MMM YYYY",
-            //         },
-            //       },
-            //     },
-            //   },
-            // },
-          }}
-        />
+        <div className="chartBox">
+          <Line
+            data={{
+              labels: labels,
+              datasets: [
+                {
+                  label: "Total Confirmed",
+                  data: data,
+                  fill: false,
+                  borderColor: "rgb(75, 192, 192)",
+                  tension: 0.1,
+                },
+              ],
+              // options: {
+              //   scales: {
+              //     x: {
+              //       type: "time",
+              //       time: {
+              //         displayFormats: {
+              //           quarter: "MMM YYYY",
+              //         },
+              //       },
+              //     },
+              //   },
+              // },
+            }}
+          />
+        </div>
       </div>
     );
   }
