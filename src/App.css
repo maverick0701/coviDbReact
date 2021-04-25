@@ -168,6 +168,7 @@ path {
   top: 10%;
   left: 58%;
   /* border: 2px solid white; */
-  height: 60vh;
+  height: 75vh;
+  overflow: scroll;
   width: 40%;
 }

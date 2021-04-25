@@ -4,7 +4,7 @@ import Charts from "./Charts";
 import Table from "./table";
 import Map from "./map";
 import TableHeader from "./TableHeader";
-
+import ChartDisplay from "./ChartDisplay";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -16,4 +16,5 @@ export {
   TableHeader,
   getStateData,
   getCaseTimeSeries,
+  ChartDisplay,
 };

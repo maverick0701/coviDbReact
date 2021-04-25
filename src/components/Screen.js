@@ -13,7 +13,7 @@ import {
 class Screen extends Component {
   componentDidMount() {
     this.props.dispatch(getStateData());
-    this.props.dispatch(getCaseTimeSeries());
+    this.props.dispatch(getCaseTimeSeries("India"));
   }
 
   render() {

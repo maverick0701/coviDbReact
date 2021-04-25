@@ -28,15 +28,16 @@ export function getChartsData(res) {
   };
 }
 
-export function getCaseTimeSeries() {
+export function getCaseTimeSeries(location) {
   return function (dispatch) {
-    let urls = ApiUrls.case_time_series();
+    let urls;
+    urls = ApiUrls.case_time_series(location);
     let data;
     axios
       .get(urls, {
         params: {
           apiName: case_time_series,
-          key: "Total Confirmed,Date,Date_YMD ",
+          key: "Total Confirmed,Date,Date_YMD,Daily Recovered,Total Recovered",
         },
       })
       .then((res) => {

@@ -1,0 +1,28 @@
+import React, { Component } from "react";
+import { Line } from "react-chartjs-2";
+export default class chartDisplay extends Component {
+  constructor(props) {
+    super();
+  }
+  render() {
+    let { data, labels, title } = this.props;
+    return (
+      <div>
+        <Line
+          data={{
+            labels: labels,
+            datasets: [
+              {
+                label: title,
+                data: data,
+                fill: false,
+                borderColor: "rgb(75, 192, 192)",
+                tension: 0.1,
+              },
+            ],
+          }}
+        />
+      </div>
+    );
+  }
+}
