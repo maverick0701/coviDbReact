@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { Charts, Table, Map, TableHeader, getStateData } from "./index";
+import {
+  Charts,
+  Table,
+  Map,
+  TableHeader,
+  getStateData,
+  getCaseTimeSeries,
+} from "./index";
 
 class Screen extends Component {
   componentDidMount() {
     this.props.dispatch(getStateData());
+    this.props.dispatch(getCaseTimeSeries());
   }
 
   render() {

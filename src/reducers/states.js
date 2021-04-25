@@ -1,7 +1,8 @@
-import { state_wise } from "../actions/index";
+import { case_time_series, state_wise } from "../actions/index";
 
 const initialStatereducer = {
   state: {},
+  chartData: [],
 };
 
 export default function state(state = initialStatereducer, action) {
@@ -11,6 +12,12 @@ export default function state(state = initialStatereducer, action) {
         ...state,
         state: action.data,
       };
+    case case_time_series: {
+      return {
+        ...state,
+        chartData: action.data,
+      };
+    }
     default:
       return {
         ...state,
