@@ -5,6 +5,7 @@ import Table from "./table";
 import Map from "./map";
 import TableHeader from "./TableHeader";
 import ChartDisplay from "./ChartDisplay";
+import MapSearchForm from "./MapSearchForm";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -17,4 +18,5 @@ export {
   getStateData,
   getCaseTimeSeries,
   ChartDisplay,
+  MapSearchForm,
 };

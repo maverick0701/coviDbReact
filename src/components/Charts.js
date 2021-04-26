@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { ChartDisplay } from "./index";
+import { ChartDisplay, MapSearchForm, getCaseTimeSeries } from "./index";
 class Charts extends Component {
   populateData(data) {
     let totalConfirmed = [];
@@ -8,7 +8,6 @@ class Charts extends Component {
     let totalRecovered = [];
     let deceased = [];
     let title = ["Confirmed", "Recovered", "Deceased"];
-
     data.map((elem) => {
       totalConfirmed.push(elem["Confirmed"]);
       totalRecovered.push(elem["Recovered"]);
@@ -24,6 +23,11 @@ class Charts extends Component {
       deceased,
     };
   }
+  clickHandler = (e) => {
+    e.preventDefault();
+    let location = document.getElementById("state").value;
+    this.props.dispatch(getCaseTimeSeries(location));
+  };
   render() {
     let data = {};
     let labels;
@@ -40,6 +44,14 @@ class Charts extends Component {
 
     return (
       <div className="Charts">
+        <div class="searchForm">
+          <form>
+            <MapSearchForm />
+            <button type="submit" onClick={this.clickHandler}>
+              Button{" "}
+            </button>
+          </form>
+        </div>
         {Object.keys(data).map((key, index) => (
           <div className="chartBox">
             {display !== 0 && (
