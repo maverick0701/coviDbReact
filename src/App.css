@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Karantina&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Indie+Flower&family=Karantina&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap");
 :root {
   --navColor: #1e1e30;
   --backColor: #161726;
@@ -175,7 +176,7 @@ path {
 }
 
 .stateDisplay {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   height: 90vh;
   width: 85vw;
   position: relative;
@@ -183,10 +184,151 @@ path {
 }
 
 .stateInfoCard {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   height: 40vh;
   width: 35vw;
   position: absolute;
   top: 5%;
   left: 5%;
+}
+
+.stateInfoCardHeader {
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: row;
+}
+.stateName {
+  width: 60%;
+  /* border: 2px solid white; */
+  font-size: 42px;
+  color: #e23028;
+  font-family: "Karantina", cursive;
+}
+.statePopulationNum {
+  text-align: right;
+  width: 60%;
+  /* border: 2px solid white; */
+
+  color: #9673b9;
+  font-family: "Karantina", cursive;
+  font-family: "Source Code Pro", monospace;
+}
+.pos {
+  font-size: 10px;
+}
+.infoCardBody {
+  height: 88%;
+  /* border: 1px solid white; */
+}
+
+.infocontent {
+  display: flex;
+  flex-direction: row;
+}
+.infocontent > div {
+  /* border: 2px solid white; */
+  height: 200px;
+  width: 40%;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.contentBody {
+  position: relative;
+}
+.title {
+  font-family: "Karantina", cursive;
+  color: white;
+  /* border: 2px solid white; */
+  position: absolute;
+  font-size: 24px;
+  top: 30%;
+  left: 24%;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  font-family: "Crimson Text", serif;
+  font-family: "Indie Flower", cursive;
+  font-family: "Karantina", cursive;
+  font-family: "Source Code Pro", monospace;
+  font-size: 18px;
+  color: #f70c3a;
+}
+
+.graph {
+  position: absolute;
+  top: 70%;
+}
+.posNum {
+  color: #9772b9;
+}
+#active {
+  color: #057bfe;
+}
+.recovered {
+  color: #27a844;
+}
+
+.TopDistrict {
+  /* border: 2px solid white; */
+  height: 40vh;
+  min-height: 200px;
+  width: 40vw;
+  position: absolute;
+  left: 56%;
+  top: 5%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
+.TopDistrictTitle {
+  color: #28a745;
+  font-family: "Orelega One", cursive;
+  /* border: 2px solid white; */
+  width: 30%;
+  font-size: 22px;
+}
+
+.Content {
+  /* border: 2px solid white; */
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.ContentLeft {
+  /* border: 2px solid white; */
+  width: 35%;
+  height: 100%;
+}
+.ContentLeftContent {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  color: #6c757d;
+  margin-top: 22px;
+  position: relative;
+}
+.numberLeft {
+  width: 28%;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.place {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  position: absolute;
+  left: 50%;
+  top: 21%;
+}
+
+.Deceased {
+  left: 30%;
+}
+.districtDataChart {
+  width: 60%;
+  height: 100%;
+  /* border: 2px solid white; */
 }

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import {
   getDistrictWiseData,
   getSelectedSateBaseNum,
   getStateTrends,
 } from "../actions/getDistrict";
+import { StateDisplay, TopDistric } from "./index";
 import { ApiUrls } from "../helpers/Api";
+
 class State extends Component {
   componentDidMount() {
     let urls = ApiUrls.district_time_series();
@@ -18,9 +21,10 @@ class State extends Component {
   render() {
     return (
       <div>
-        <div className="stateDisplay">
-          <div className="stateInfoCard"></div>
-        </div>
+        <StateDisplay district={this.props.district} />
+        {this.props.district && (
+          <TopDistric district={this.props.district.districtData} />
+        )}
       </div>
     );
   }

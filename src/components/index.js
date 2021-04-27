@@ -8,6 +8,10 @@ import ChartDisplay from "./ChartDisplay";
 import MapSearchForm from "./MapSearchForm";
 import Home from "./home";
 import State from "./State";
+import StateDisplay from "./stateDisplay";
+import TopDistric from "./TopDistric";
+import ContentLeftContent from "./ContentLeftContent";
+import BarChart from "./barChart";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -23,4 +27,8 @@ export {
   MapSearchForm,
   Home,
   State,
+  StateDisplay,
+  TopDistric,
+  ContentLeftContent,
+  BarChart,
 };
