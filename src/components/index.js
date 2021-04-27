@@ -6,6 +6,8 @@ import Map from "./map";
 import TableHeader from "./TableHeader";
 import ChartDisplay from "./ChartDisplay";
 import MapSearchForm from "./MapSearchForm";
+import Home from "./home";
+import State from "./State";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -19,4 +21,6 @@ export {
   getCaseTimeSeries,
   ChartDisplay,
   MapSearchForm,
+  Home,
+  State,
 };

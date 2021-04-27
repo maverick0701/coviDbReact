@@ -143,8 +143,9 @@ path {
 
 .map {
   position: absolute;
-  left: 20%;
+  left: 2%;
   top: 110vh;
+  fill: #161726;
 }
 .table-body {
   display: flex;

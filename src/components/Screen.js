@@ -1,56 +1,25 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-
-import {
-  Charts,
-  Table,
-  Map,
-  TableHeader,
-  getStateData,
-  getCaseTimeSeries,
-} from "./index";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { Home, State } from "./index";
 
 class Screen extends Component {
-  componentDidMount() {
-    this.props.dispatch(getStateData());
-    this.props.dispatch(getCaseTimeSeries("India"));
-    console.log("cmd inside");
-  }
-
   render() {
-    let keys;
-    let datas;
-    if (this.props.state.state.data) {
-      datas = this.props.state.state.data.finalDataArray;
-      keys = ["State", "Confirmed", "Recovered", "Deaths", "Active"];
-      keys.pop();
-    }
     return (
-      <div className="Screen">
-        <div id="tableScreen">
-          {this.props.state.state.data && <TableHeader keys={keys} />}
-          <div id="contentInTable">
-            {this.props.state.state.data !== undefined &&
-              datas.map((data) => <Table data={data} keys={keys} />)}
-          </div>
+      <Router>
+        <div className="Screen">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/statewise/:location"
+              render={(props) => {
+                return <State {...props} />;
+              }}
+            />
+          </Switch>
         </div>
-        <div>
-          <Map />
-        </div>
-        <div>
-          <Charts />
-        </div>
-      </div>
+      </Router>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    state: state.state,
-  };
-}
-
-const connectedScreenComponent = connect(mapStateToProps)(Screen);
-
-export default connectedScreenComponent;
+export default Screen;
