@@ -173,3 +173,20 @@ path {
   overflow: scroll;
   width: 40%;
 }
+
+.stateDisplay {
+  border: 2px solid white;
+  height: 90vh;
+  width: 85vw;
+  position: relative;
+  top: 5%;
+}
+
+.stateInfoCard {
+  border: 2px solid white;
+  height: 40vh;
+  width: 35vw;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}

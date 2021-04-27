@@ -7,6 +7,7 @@ export const ApiUrls = {
   state_wise: () => `${API_ROOT}/states`,
   case_time_series: (location) => locationsMapedToApi(location),
   district_time_series: () => `${API_ROOT}/getDistrictData`,
+  selected_state_base_num: () => `${API_ROOT}/getState`,
 };
 
 export function Capitalize(string) {
