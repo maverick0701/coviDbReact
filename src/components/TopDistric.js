@@ -5,7 +5,7 @@ export default class TopDistric extends Component {
   render() {
     let district = this.props.district;
     let { whatToDisplay } = this.props;
-    console.log(this.props.district);
+
     let data;
     return (
       <div>

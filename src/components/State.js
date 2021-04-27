@@ -33,7 +33,9 @@ class State extends Component {
           />
         )}
 
-        <CovidInfoBox />
+        {this.props.district && (
+          <CovidInfoBox {...this.props.district.baseStateData.data} />
+        )}
       </div>
     );
   }
