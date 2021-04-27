@@ -5,8 +5,16 @@ import {
   selected_state_trends,
   state_time_series,
   state_wise,
+  toggleWhatToDisplay,
 } from "./index";
 import axios from "axios";
+
+export function ToggleWhatToDisplay(whatToDisplay) {
+  return {
+    type: toggleWhatToDisplay,
+    data: whatToDisplay,
+  };
+}
 
 export function districtData(data, location) {
   return {

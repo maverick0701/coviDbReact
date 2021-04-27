@@ -1,6 +1,11 @@
 import React, { Component } from "react";
+import { ToggleWhatToDisplay } from "../actions/getDistrict";
 import covertNumToDisplay from "../helpers/Form";
 export default class StateDisplay extends Component {
+  toggleDisplatHandler = (whatToDisplay) => {
+    this.props.dispatch(ToggleWhatToDisplay(whatToDisplay));
+  };
+
   render() {
     let { location } = this.props.district;
     let Confirmed, Recovered, Active, Deaths;
@@ -24,7 +29,10 @@ export default class StateDisplay extends Component {
             </div>
             <div className="infoCardBody">
               <div className="infocontent">
-                <div className="contentBody">
+                <div
+                  className="contentBody"
+                  onClick={() => this.toggleDisplatHandler("Confirmed")}
+                >
                   <div className="title">Confirmed</div>
                   <div className="number">{Confirmed}</div>
                   <div className="graph">
@@ -40,7 +48,10 @@ export default class StateDisplay extends Component {
                     </svg>
                   </div>
                 </div>
-                <div className="contentBody">
+                <div
+                  className="contentBody"
+                  onClick={() => this.toggleDisplatHandler("Recovered")}
+                >
                   <div className="title">Recovered</div>
                   <div className="number recovered">{Recovered}</div>
                   <div className="graph">
@@ -56,7 +67,10 @@ export default class StateDisplay extends Component {
                     </svg>
                   </div>
                 </div>
-                <div className="contentBody">
+                <div
+                  className="contentBody"
+                  onClick={() => this.toggleDisplatHandler("Active")}
+                >
                   <div className="title">Active</div>
                   <div className="number" id="active">
                     {Active}
@@ -74,7 +88,10 @@ export default class StateDisplay extends Component {
                     </svg>
                   </div>
                 </div>
-                <div className="contentBody">
+                <div
+                  className="contentBody"
+                  onClick={() => this.toggleDisplatHandler("Deceased")}
+                >
                   <div className="title">Diseased</div>
                   <div className="number">{Deaths}</div>
                   <div className="graph">

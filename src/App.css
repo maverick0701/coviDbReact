@@ -332,3 +332,84 @@ path {
   height: 100%;
   /* border: 2px solid white; */
 }
+
+.CovidInfo {
+  /* border: 2px solid white; */
+  height: 53vh;
+  width: 45%;
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.CovidInfoBox {
+  width: 220px;
+  height: 47%;
+  margin-left: 45px;
+  margin-bottom: 20px;
+  /* border: 2px solid white; */
+  border-radius: 10px;
+  color: #a31b34;
+  position: relative;
+  background-color: #341a27 !important;
+}
+
+.CovidInfoBoxHeader {
+  /* border: 2px solid white; */
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=New+Tegomin&display=swap");
+
+.CovidInfoBoxNumber {
+  color: #aa1b33 !important;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-family: "New Tegomin", serif;
+}
+
+.CovidInfoBoxBody {
+  /* border: 2px solid white; */
+  position: absolute;
+  top: 49%;
+  left: 6%;
+  width: 90%;
+  font-family: "Montserrat", sans-serif;
+  color: #e23028 !important;
+}
+.box2 {
+  background-color: #171e32 !important;
+  color: #18488e !important;
+}
+.box3 {
+  background-color: #1a2829 !important;
+  color: #27753b;
+}
+.box4 {
+  background-color: #241142 !important;
+}
+
+.box2Num {
+  color: #0b71ea !important;
+}
+.box3Num {
+  color: #27a844 !important;
+}
+
+.box2Body {
+  color: #0b71ea !important;
+}
+.box3Body {
+  color: #28a745 !important;
+}
+.box3Title {
+  width: 100%;
+}

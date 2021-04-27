@@ -6,7 +6,7 @@ import {
   getSelectedSateBaseNum,
   getStateTrends,
 } from "../actions/getDistrict";
-import { StateDisplay, TopDistric } from "./index";
+import { StateDisplay, TopDistric, CovidInfoBox } from "./index";
 import { ApiUrls } from "../helpers/Api";
 
 class State extends Component {
@@ -19,12 +19,21 @@ class State extends Component {
     this.props.dispatch(getSelectedSateBaseNum(location));
   }
   render() {
+    let { whatToDisplay } = this.props.district;
     return (
       <div>
-        <StateDisplay district={this.props.district} />
+        <StateDisplay
+          district={this.props.district}
+          dispatch={this.props.dispatch}
+        />
         {this.props.district && (
-          <TopDistric district={this.props.district.districtData} />
+          <TopDistric
+            district={this.props.district.districtData}
+            whatToDisplay={whatToDisplay}
+          />
         )}
+
+        <CovidInfoBox />
       </div>
     );
   }

@@ -12,6 +12,7 @@ import StateDisplay from "./stateDisplay";
 import TopDistric from "./TopDistric";
 import ContentLeftContent from "./ContentLeftContent";
 import BarChart from "./barChart";
+import CovidInfoBox from "./covidInfoBox";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -31,4 +32,5 @@ export {
   TopDistric,
   ContentLeftContent,
   BarChart,
+  CovidInfoBox,
 };

@@ -2,6 +2,7 @@ import {
   district_wise_data,
   selected_state_trends,
   selected_state_base_num,
+  toggleWhatToDisplay,
 } from "../actions";
 
 const initialDistrictreducer = {
@@ -9,6 +10,7 @@ const initialDistrictreducer = {
   location: "",
   selectedStateData: [],
   baseStateData: {},
+  whatToDisplay: "Confirmed",
 };
 
 export default function district(state = initialDistrictreducer, action) {
@@ -30,6 +32,12 @@ export default function district(state = initialDistrictreducer, action) {
       return {
         ...state,
         baseStateData: action.data,
+      };
+    }
+    case toggleWhatToDisplay: {
+      return {
+        ...state,
+        whatToDisplay: action.data,
       };
     }
     default:

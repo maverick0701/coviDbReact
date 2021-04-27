@@ -4,7 +4,8 @@ import { ContentLeftContent, BarChart } from "./index";
 export default class TopDistric extends Component {
   render() {
     let district = this.props.district;
-    let whatToDisplay = "Active";
+    let { whatToDisplay } = this.props;
+    console.log(this.props.district);
     let data;
     return (
       <div>
@@ -13,7 +14,11 @@ export default class TopDistric extends Component {
           <div className="Content">
             <div className="ContentLeft">
               {district.map((data) => (
-                <ContentLeftContent {...data} whatToDisplay={whatToDisplay} />
+                <ContentLeftContent
+                  {...data}
+                  whatToDisplay={whatToDisplay}
+                  dispatch={this.props.dispatch}
+                />
               ))}
             </div>
             <div className="districtDataChart">
