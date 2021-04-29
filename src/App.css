@@ -500,7 +500,7 @@ path {
 }
 
 .active {
-  border: 2px solid white;
+  border: 4px solid white;
   height: 26px;
   text-align: center;
   border-top-left-radius: 10px;
