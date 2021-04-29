@@ -6,7 +6,12 @@ import {
   getSelectedSateBaseNum,
   getStateTrends,
 } from "../actions/getDistrict";
-import { StateDisplay, TopDistric, CovidInfoBox } from "./index";
+import {
+  StateDisplay,
+  TopDistric,
+  CovidInfoBox,
+  ChartStateDisplay,
+} from "./index";
 import { ApiUrls } from "../helpers/Api";
 
 class State extends Component {
@@ -35,6 +40,11 @@ class State extends Component {
 
         {this.props.district && (
           <CovidInfoBox {...this.props.district.baseStateData.data} />
+        )}
+        {this.props.district && (
+          <div className="chartStateDisplay">
+            <ChartStateDisplay district={this.props.district} />
+          </div>
         )}
       </div>
     );

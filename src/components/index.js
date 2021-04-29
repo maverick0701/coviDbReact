@@ -13,6 +13,10 @@ import TopDistric from "./TopDistric";
 import ContentLeftContent from "./ContentLeftContent";
 import BarChart from "./barChart";
 import CovidInfoBox from "./covidInfoBox";
+import Dashboard from "./Dashboard";
+import ChartStateDisplay from "./ChartStateDisplay";
+import Search from "./Search";
+import DashBoardToggle from "./DashBoardToggle";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -33,4 +37,8 @@ export {
   ContentLeftContent,
   BarChart,
   CovidInfoBox,
+  ChartStateDisplay,
+  Dashboard,
+  Search,
+  DashBoardToggle,
 };
