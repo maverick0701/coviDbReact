@@ -5,3 +5,5 @@ export const district_wise_data = "district_wise_data";
 export const selected_state_trends = "selected_state_trends";
 export const selected_state_base_num = "selected_state_base_num";
 export const toggleWhatToDisplay = "toggleWhatToDisplay";
+
+export const toggleDashboardDisplay = "toggleDashboardDisplay";

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-
-export default class DashBoardToggle extends Component {
+import { setDisplayDashboard } from "../actions/setDashboard";
+import { connect } from "react-redux";
+class DashBoardToggle extends Component {
   toggleTabs = (e) => {
     console.log(e.target);
-
+    this.props.dispatch(setDisplayDashboard(e.target.innerText));
     document.querySelector(".active").classList.remove("active");
     e.target.classList.add("active");
   };
@@ -28,3 +29,12 @@ export default class DashBoardToggle extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    dashboard: state.dashboard,
+  };
+}
+
+const connectedDashboardComponent = connect(mapStateToProps)(DashBoardToggle);
+export default connectedDashboardComponent;
