@@ -1,7 +1,8 @@
-import { toggleDashboardDisplay } from "../actions";
+import { toggleDashboardDisplay, getTweetData } from "../actions";
 
 const intialDashboardReducer = {
   display: "",
+  tweets: [],
 };
 
 export default function dashboard(state = intialDashboardReducer, action) {
@@ -12,7 +13,12 @@ export default function dashboard(state = intialDashboardReducer, action) {
         display: action.data,
       };
     }
-
+    case getTweetData: {
+      return {
+        ...state,
+        tweets: action.data,
+      };
+    }
     default:
       return {
         ...state,

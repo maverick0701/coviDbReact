@@ -18,6 +18,7 @@ import ChartStateDisplay from "./ChartStateDisplay";
 import Search from "./Search";
 import DashBoardToggle from "./DashBoardToggle";
 import DashBoardBody from "./DashboardBody";
+import TwitterBox from "./twitterBox";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -43,4 +44,5 @@ export {
   Search,
   DashBoardToggle,
   DashBoardBody,
+  TwitterBox,
 };

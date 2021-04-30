@@ -7,3 +7,4 @@ export const selected_state_base_num = "selected_state_base_num";
 export const toggleWhatToDisplay = "toggleWhatToDisplay";
 
 export const toggleDashboardDisplay = "toggleDashboardDisplay";
+export const getTweetData = "getTweetData";

@@ -1,14 +1,21 @@
 import React, { Component } from "react";
 import { Search, DashBoardToggle } from "./index";
-import { setDisplayDashboard } from "../actions/setDashboard";
+import { setDisplayDashboard, getTweeterData } from "../actions/setDashboard";
 import DashboardBody from "./DashboardBody";
 import { connect } from "react-redux";
 
 class Dashboard extends Component {
   componentDidMount() {
     this.props.dispatch(setDisplayDashboard("Tweets"));
+    this.props.dispatch(getTweeterData());
   }
   render() {
+    let tweets;
+    // console.log(this.props.tweets);
+    if (this.props.tweets) {
+      tweets = this.props.tweets;
+    }
+    // console.log(tweets, "****");
     return (
       <div>
         <div className="headerSearch">
@@ -22,7 +29,7 @@ class Dashboard extends Component {
             )}
             <div className="DashboardBody">
               <div className="DashboardBodyHeader stateName">Delhi</div>
-              <DashboardBody />
+              {tweets.length !== 0 && <DashboardBody tweets={tweets} />}
             </div>
           </div>
         </div>
@@ -34,6 +41,7 @@ class Dashboard extends Component {
 function mapStateToProps(state) {
   return {
     dashboard: state.dashboard,
+    tweets: state.dashboard.tweets,
   };
 }
 

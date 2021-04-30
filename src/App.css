@@ -558,11 +558,20 @@ path {
   height: 20%;
   padding: 10px;
   /* box-sizing: border-box; */
-  font-size: 29px !important;
+  font-size: 20px !important;
 }
 .TweetBoxBody {
   /* border: 2px solid white; */
   /* height: 20%; */
   height: 50%;
   padding: 10px;
+}
+.hashTags {
+  height: 18px;
+  font-size: 15px;
+  width: 100%;
+  /* border: 2px solid white; */
+}
+.tag {
+  margin-left: 10px;
 }
