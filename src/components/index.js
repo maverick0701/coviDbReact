@@ -17,6 +17,7 @@ import Dashboard from "./Dashboard";
 import ChartStateDisplay from "./ChartStateDisplay";
 import Search from "./Search";
 import DashBoardToggle from "./DashBoardToggle";
+import DashBoardBody from "./DashboardBody";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 
 export {
@@ -41,4 +42,5 @@ export {
   Dashboard,
   Search,
   DashBoardToggle,
+  DashBoardBody,
 };

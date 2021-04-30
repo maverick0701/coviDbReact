@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Search, DashBoardToggle } from "./index";
 import { setDisplayDashboard } from "../actions/setDashboard";
+import DashboardBody from "./DashboardBody";
 import { connect } from "react-redux";
 
 class Dashboard extends Component {
@@ -19,9 +20,10 @@ class Dashboard extends Component {
                 display={this.props.dashboard}
               />
             )}
-            {/* <header className="DashboardHeader">
-              <div className="DashboardLocation stateName">Delhi</div>
-            </header> */}
+            <div className="DashboardBody">
+              <div className="DashboardBodyHeader stateName">Delhi</div>
+              <DashboardBody />
+            </div>
           </div>
         </div>
       </div>
