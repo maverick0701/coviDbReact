@@ -9,7 +9,7 @@ export default function dashboard(state = intialDashboardReducer, action) {
     case toggleDashboardDisplay: {
       return {
         ...state,
-        display: action.display,
+        display: action.data,
       };
     }
 
