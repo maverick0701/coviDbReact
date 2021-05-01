@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class TwitterBox extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div>
         <div className="tweetBox">

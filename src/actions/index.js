@@ -8,3 +8,4 @@ export const toggleWhatToDisplay = "toggleWhatToDisplay";
 
 export const toggleDashboardDisplay = "toggleDashboardDisplay";
 export const getTweetData = "getTweetData";
+export const getHospitalList = "getHospitalList";

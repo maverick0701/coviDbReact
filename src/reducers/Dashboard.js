@@ -1,8 +1,14 @@
-import { toggleDashboardDisplay, getTweetData } from "../actions";
+import {
+  toggleDashboardDisplay,
+  getTweetData,
+  getHospitalList,
+} from "../actions";
 
 const intialDashboardReducer = {
   display: "",
   tweets: [],
+  location: "Delhi",
+  hospitalList: [],
 };
 
 export default function dashboard(state = intialDashboardReducer, action) {
@@ -17,6 +23,12 @@ export default function dashboard(state = intialDashboardReducer, action) {
       return {
         ...state,
         tweets: action.data,
+      };
+    }
+    case getHospitalList: {
+      return {
+        ...state,
+        hospitalList: action.data,
       };
     }
     default:
