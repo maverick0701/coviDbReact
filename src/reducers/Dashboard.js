@@ -2,6 +2,7 @@ import {
   toggleDashboardDisplay,
   getTweetData,
   getHospitalList,
+  getOxyList,
 } from "../actions";
 
 const intialDashboardReducer = {
@@ -9,6 +10,7 @@ const intialDashboardReducer = {
   tweets: [],
   location: "Delhi",
   hospitalList: [],
+  oxyList: [],
 };
 
 export default function dashboard(state = intialDashboardReducer, action) {
@@ -29,6 +31,12 @@ export default function dashboard(state = intialDashboardReducer, action) {
       return {
         ...state,
         hospitalList: action.data,
+      };
+    }
+    case getOxyList: {
+      return {
+        ...state,
+        oxyList: action.data,
       };
     }
     default:

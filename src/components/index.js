@@ -21,6 +21,7 @@ import DashBoardBody from "./DashboardBody";
 import TwitterBox from "./twitterBox";
 import HospitalListDisplay from "./HospitalListDisplay";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
+import OxygenLIst from "./oxygenLIst";
 
 export {
   Sidebar,
@@ -47,4 +48,5 @@ export {
   DashBoardBody,
   TwitterBox,
   HospitalListDisplay,
+  OxygenLIst,
 };

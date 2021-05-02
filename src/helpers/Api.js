@@ -10,6 +10,7 @@ export const ApiUrls = {
   selected_state_base_num: () => `${API_ROOT}/getState`,
   get_tweet_data: () => `${API_ROOT}/getTweets`,
   get_hopital_list: () => `${API_ROOT}/getHospitalList`,
+  get_oxy_list: () => `${API_ROOT}/getOxyList`,
 };
 
 export function Capitalize(string) {
