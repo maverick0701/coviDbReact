@@ -1,5 +1,6 @@
 import axios from "axios";
 import qs from "qs";
+import jwt_decode from "jwt-decode";
 import { ApiUrls } from "../helpers/Api";
 import { beginLogin, loginSuccess, loginFailed } from "./index";
 
@@ -16,6 +17,13 @@ export function loginFailedFunction(error) {
   };
 }
 
+export function loginSuccessFunction(user) {
+  return {
+    type: loginSuccess,
+    user: user,
+  };
+}
+
 export function startAuthFunction(data) {
   return function (dispatch) {
     dispatch(beginLoginFunction());
@@ -28,7 +36,18 @@ export function startAuthFunction(data) {
         headers: headers,
       })
       .then((data) => {
-        console.log(data.data.data);
+        if (data.data.data) {
+          let token = data.data.data.token;
+          //   console.log(token);
+          let user = jwt_decode(token);
+          localStorage.setItem("token", token);
+          return dispatch(loginSuccessFunction(user));
+        } else {
+          console.log("ji");
+          return dispatch(
+            loginFailedFunction("failed!! Invalid user name or password")
+          );
+        }
       });
   };
 }

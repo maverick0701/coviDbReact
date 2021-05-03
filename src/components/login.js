@@ -28,15 +28,18 @@ class Login extends Component {
   };
 
   render() {
+    let { inProgress, error } = this.props.auth;
     return (
       <div className="container">
         <div className="outer-wrapper">
           <div className="form-head">Login</div>
           <div className="form-content">
             <form>
+              {error && <div className="error">{error}</div>}
               <div className="form-inp">
                 <input
                   type="email"
+                  className="eml"
                   placeholder="Email"
                   onChange={this.changeEmailValue}
                 />
@@ -45,17 +48,25 @@ class Login extends Component {
                 <input
                   type="password"
                   placeholder="Password"
+                  className="eml"
                   onChange={this.changePasswodValue}
                 />
               </div>
               <div className="submit-btn">
-                <button
-                  type="submit"
-                  className="submit-btn1"
-                  onClick={this.handleSubmitForm}
-                >
-                  Proceed
-                </button>
+                {inProgress == false && (
+                  <button
+                    type="submit"
+                    className="submit-btn1"
+                    onClick={this.handleSubmitForm}
+                  >
+                    Proceed
+                  </button>
+                )}
+                {inProgress && (
+                  <button type="submit" className="submit-btn1">
+                    in Progress
+                  </button>
+                )}
               </div>
             </form>
           </div>
