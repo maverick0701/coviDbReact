@@ -11,3 +11,8 @@ export const getTweetData = "getTweetData";
 export const getHospitalList = "getHospitalList";
 
 export const getOxyList = "getOxyList";
+export const setDashboardLocation = "setDashboardLocation";
+
+export const beginLogin = "beginLogin";
+export const loginSuccess = "loginSuccess";
+export const loginFailed = "loginFailed";

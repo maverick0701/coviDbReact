@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { Home, State, Dashboard } from "./index";
+import { Home, State, Dashboard, Login } from "./index";
 
 class Screen extends Component {
   render() {
@@ -19,6 +19,12 @@ class Screen extends Component {
               path="/Dashboard"
               render={(props) => {
                 return <Dashboard {...props} />;
+              }}
+            />
+            <Route
+              path="/login"
+              render={(props) => {
+                return <Login {...props} />;
               }}
             />
           </Switch>

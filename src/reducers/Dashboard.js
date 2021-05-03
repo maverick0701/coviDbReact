@@ -3,6 +3,7 @@ import {
   getTweetData,
   getHospitalList,
   getOxyList,
+  setDashboardLocation,
 } from "../actions";
 
 const intialDashboardReducer = {
@@ -37,6 +38,12 @@ export default function dashboard(state = intialDashboardReducer, action) {
       return {
         ...state,
         oxyList: action.data,
+      };
+    }
+    case setDashboardLocation: {
+      return {
+        ...state,
+        location: action.data,
       };
     }
     default:

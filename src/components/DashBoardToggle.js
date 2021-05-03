@@ -40,7 +40,7 @@ export default class DashBoardToggle extends Component {
               Oxygen
             </div>
           )}
-          {display === "Medicine" && (
+          {/* {display === "Medicine" && (
             <div className="tab active" onClick={this.toggleTabs}>
               Medicine
             </div>
@@ -49,7 +49,7 @@ export default class DashBoardToggle extends Component {
             <div className="tab" onClick={this.toggleTabs}>
               Medicine
             </div>
-          )}
+          )} */}
         </div>
       </div>
     );

@@ -22,7 +22,7 @@ export default class HospitalListDisplay extends Component {
                   <span> </span>
                   {hospital.phone1}
                 </div>
-                <div>Verified on : {hospital.lastVerifiedOn.split("T")[0]}</div>
+                {/* <div>Verified on : {hospital.lastVerifiedOn.split("T")[0]}</div> */}
               </div>
             </div>
           </div>

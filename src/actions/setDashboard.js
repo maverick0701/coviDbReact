@@ -5,6 +5,7 @@ import {
   getTweetData,
   getHospitalList,
   getOxyList,
+  setDashboardLocation,
 } from "./index";
 
 export function setDisplayDashboard(display) {
@@ -29,13 +30,17 @@ export function setHospitalList(data) {
   };
 }
 
-export function getTweeterData() {
+export function getTweeterData(location) {
   return function (dispatch) {
     let urls = ApiUrls.get_tweet_data();
+    // location = location.split(" ")[0];
     let data;
+    if (location === undefined) {
+      location = "Delhi";
+    }
     axios
       .get(urls, {
-        params: { location: "Delhi" },
+        params: { location: location },
       })
       .then((res) => {
         if (res) {
@@ -46,13 +51,15 @@ export function getTweeterData() {
   };
 }
 
-export function getDataHospitalList() {
+export function getDataHospitalList(location) {
   return function (dispatch) {
     let urls = ApiUrls.get_hopital_list();
-
+    if (location === undefined) {
+      location = "Delhi (NCT)";
+    }
     axios
       .get(urls, {
-        params: { location: "Delhi (NCT)" },
+        params: { location: location },
       })
       .then((res) => {
         if (res) {
@@ -69,16 +76,26 @@ export function setOxyList(data) {
     type: getOxyList,
   };
 }
-export function getOxyListData() {
+export function getOxyListData(location) {
   return function (dispatch) {
     let urls = ApiUrls.get_oxy_list();
+    if (location === undefined) {
+      location = "Delhi (NCT)";
+    }
     axios
       .get(urls, {
-        params: { location: "Delhi (NCT)" },
+        params: { location: location },
       })
       .then((res) => {
         // console.log(res.data.data, "*******");
         return dispatch(setOxyList(res.data.data));
       });
+  };
+}
+
+export function setDashboardLocationFunction(location) {
+  return {
+    type: setDashboardLocation,
+    data: location,
   };
 }

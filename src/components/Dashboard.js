@@ -10,9 +10,11 @@ import {
   getTweeterData,
   getDataHospitalList,
   getOxyListData,
+  setDashboardLocationFunction,
 } from "../actions/setDashboard";
 import DashboardBody from "./DashboardBody";
 import { connect } from "react-redux";
+import { getHospitalList } from "../actions";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -21,6 +23,15 @@ class Dashboard extends Component {
     this.props.dispatch(getDataHospitalList());
     this.props.dispatch(getOxyListData());
   }
+  onClickFormHandler = (e) => {
+    e.preventDefault();
+    let location = document.getElementById("stateForDashBoard").value;
+    this.props.dispatch(setDashboardLocationFunction(location));
+    this.props.dispatch(getDataHospitalList(location));
+    this.props.dispatch(getOxyListData(location));
+    this.props.dispatch(getTweeterData(location));
+    // console.log(location);
+  };
   render() {
     let tweets;
     let location;
@@ -46,7 +57,7 @@ class Dashboard extends Component {
     return (
       <div>
         <div className="headerSearch">
-          <Search />
+          <Search onClickFormHandler={this.onClickFormHandler} />
           <div className="DashboardBodyBox">
             {this.props.dashboard.display && (
               <DashBoardToggle
