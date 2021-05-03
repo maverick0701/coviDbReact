@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
-export default class Login extends Component {
+import { startAuthFunction } from "../actions/auth";
+import { connect } from "react-redux";
+class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -22,7 +23,8 @@ export default class Login extends Component {
   };
   handleSubmitForm = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.dispatch(startAuthFunction(this.state));
+    // console.log(this.state);
   };
 
   render() {
@@ -62,3 +64,12 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    auth: state.auth,
+  };
+}
+
+const connectedLoginComponent = connect(mapStateToProps)(Login);
+export default connectedLoginComponent;

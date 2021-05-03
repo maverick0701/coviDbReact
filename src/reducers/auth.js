@@ -32,5 +32,10 @@ export default function auth(state = intialAuthReducer, action) {
         error: action.error,
       };
     }
+    default: {
+      return {
+        ...state,
+      };
+    }
   }
 }
