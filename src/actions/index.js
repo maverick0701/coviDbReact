@@ -16,3 +16,6 @@ export const setDashboardLocation = "setDashboardLocation";
 export const beginLogin = "beginLogin";
 export const loginSuccess = "loginSuccess";
 export const loginFailed = "loginFailed";
+
+export const setAuthenticatedUser = "setAuthenticatedUser";
+export const logoutUser = "logoutUser";

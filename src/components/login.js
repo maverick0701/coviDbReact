@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import { startAuthFunction } from "../actions/auth";
 import { connect } from "react-redux";
 class Login extends Component {
@@ -28,7 +29,10 @@ class Login extends Component {
   };
 
   render() {
-    let { inProgress, error } = this.props.auth;
+    let { inProgress, error, isLoggedIn } = this.props.auth;
+    if (isLoggedIn) {
+      return <Redirect to="/Dashboard" />;
+    }
     return (
       <div className="container">
         <div className="outer-wrapper">

@@ -2,7 +2,13 @@ import axios from "axios";
 import qs from "qs";
 import jwt_decode from "jwt-decode";
 import { ApiUrls } from "../helpers/Api";
-import { beginLogin, loginSuccess, loginFailed } from "./index";
+import {
+  beginLogin,
+  loginSuccess,
+  loginFailed,
+  setAuthenticatedUser,
+  logoutUser,
+} from "./index";
 
 export function beginLoginFunction() {
   return {
@@ -17,9 +23,22 @@ export function loginFailedFunction(error) {
   };
 }
 
+export function logoutFunction() {
+  return {
+    type: logoutUser,
+  };
+}
+
 export function loginSuccessFunction(user) {
   return {
     type: loginSuccess,
+    user: user,
+  };
+}
+
+export function setAuthenticatedUserFunction(user) {
+  return {
+    type: setAuthenticatedUser,
     user: user,
   };
 }
