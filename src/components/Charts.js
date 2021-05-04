@@ -44,7 +44,7 @@ class Charts extends Component {
 
     return (
       <div className="Charts">
-        <div class="searchForm">
+        <div className="searchForm">
           <form>
             <MapSearchForm />
             <button type="submit" onClick={this.clickHandler}>

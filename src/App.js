@@ -4,6 +4,7 @@ import { getUserFromLocalStorage } from "./helpers/storage";
 import "./App.css";
 import { connect } from "react-redux";
 import { logoutFunction, setAuthenticatedUserFunction } from "./actions/auth";
+import { Redirect } from "react-router";
 
 class App extends Component {
   constructor() {
@@ -13,11 +14,13 @@ class App extends Component {
     let user = getUserFromLocalStorage();
     let currentDate = new Date();
 
-    if (user.exp * 10000 > currentDate.getTime() && this.props) {
-      this.props.dispatch(setAuthenticatedUserFunction(user));
-    } else {
-      localStorage.removeItem("token");
-      this.props.dispatch(logoutFunction());
+    if (user) {
+      if (user.exp * 10000 > currentDate.getTime() && this.props) {
+        this.props.dispatch(setAuthenticatedUserFunction(user));
+      } else {
+        localStorage.removeItem("token");
+        this.props.dispatch(logoutFunction());
+      }
     }
   }
   render() {

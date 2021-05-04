@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { Home, State, Dashboard, Login } from "./index";
+import { Home, State, Dashboard, Login, Chat } from "./index";
 
 class Screen extends Component {
   render() {
@@ -10,21 +10,31 @@ class Screen extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route
+              exact
               path="/statewise/:location"
               render={(props) => {
                 return <State {...props} />;
               }}
             />
             <Route
+              exact
               path="/Dashboard"
               render={(props) => {
                 return <Dashboard {...props} />;
               }}
             />
             <Route
+              exact
               path="/login"
               render={(props) => {
                 return <Login {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/Chat"
+              render={(props) => {
+                return <Chat {...props} />;
               }}
             />
           </Switch>

@@ -7,7 +7,7 @@ export default class MapSearchForm extends Component {
         <select
           name="state"
           id="state"
-          class="form-control"
+          className="form-control"
           className="searchOption"
         >
           <option value="India">India</option>
