@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Triage from "./triage";
 import io from "socket.io-client";
 import { Redirect } from "react-router-dom";
+import GroupMultiple from "./GroupMultiple";
 import { connect } from "react-redux";
 import "../chat.css";
 class Chat extends Component {
@@ -11,6 +13,9 @@ class Chat extends Component {
       messages: [], // {content: 'some message', self: true}
       typedMessage: "",
       chatRoom: "",
+      curQuesId: "",
+      type: "",
+      triage: {},
     };
     this.socket = io.connect("http://localhost:5000");
   }
@@ -21,70 +26,78 @@ class Chat extends Component {
     }
   }
   connectionHandler = (email, userid) => {
+    console.log("connection Handler");
     if (email) {
       let self = this;
       this.socket.on("connect", function () {
-        self.socket.emit("joinRoom", {
-          emial: email,
-          chatRoom: "ChatBot" + userid,
+        self.socket.emit("joinChat", {
+          chatRoom: "chatBot" + userid,
         });
-        self.socket.on("userJoined", function (data) {
-          let messages = self.state.messages;
+      });
 
-          let newData = { content: data.newData };
-          messages.push(newData);
-          self.setState({
-            messages: messages,
-            chatRoom: data.chatRoom,
-          });
-        });
-        self.socket.on("recieveMessage", function (data) {
-          let message = data.data;
-          let messages = self.state.messages;
-          messages.push(message);
-          self.setState({
-            messages: messages,
-          });
+      this.socket.on("chatBotActivated", function (data) {
+        let messages = self.state.messages;
+        messages.push(data);
+        self.setState({
+          chatRoom: "chatBot" + userid,
+          messages: messages,
+          type: data.type,
         });
       });
     }
   };
+  componentDidMount() {
+    let self = this;
+    this.socket.on("setQuestion", function (data) {
+      console.log("setQuestion");
+      let messages = self.state.messages;
+      messages.push(data);
+      self.setState({
+        messages: messages,
+        type: data.type,
+      });
+    });
+    this.socket.on("triage", function (data) {
+      self.setState({
+        triage: data,
+        type: data.type,
+      });
+    });
+  }
 
-  handleSubmit = () => {
-    let data = {};
-    let { user } = this.props.auth;
-    data.content = this.state.typedMessage;
-    data.email = user.email;
-    if (data.email) {
-      this.socket.emit("sendMessage", {
-        data: data,
-        chatRoom: this.state.chatRoom,
-      });
-      this.setState({
-        typedMessage: "",
-      });
+  handleSubmit = (e) => {
+    e.preventDefault();
+    let inp = document.getElementsByClassName(this.state.type);
+    let evidence = [];
+    for (let i = 0; i < inp.length; i++) {
+      let newEvidence = {
+        id: inp[i].name,
+        value: inp[i].checked,
+      };
+      evidence.push(newEvidence);
     }
+    this.socket.emit("sendAns", {
+      data: evidence,
+      type: this.state.type,
+    });
   };
   render() {
-    const { typedMessage, messages } = this.state;
-    let { email } = this.props.auth.user;
-
+    const { typedMessage, messages, type, triage } = this.state;
+    // console.log("render");
     return (
       <div>
         <div className="chat-container">
-          <div className="chat-header">Chat</div>
+          <div className="chat-header">Chat Bot</div>
           <div className="chat-messages">
-            {messages.map((message) => (
-              <div
-                className={
-                  messages.email === email
-                    ? "chat-bubble self-chat"
-                    : "chat-bubble other-chat"
-                }
-              >
-                {message.content}
+            {type !== "triage" &&
+              messages.map((message) => (
+                <GroupMultiple message={message.data} type={type} />
+              ))}
+            {type === "triage" && (
+              <div>
+                <Triage triage={triage} />
               </div>
-            ))}
+            )}
           </div>
           <div className="chat-footer">
             <input
