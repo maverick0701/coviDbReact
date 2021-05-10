@@ -12,6 +12,7 @@ export const ApiUrls = {
   get_hopital_list: () => `${API_ROOT}/getHospitalList`,
   get_oxy_list: () => `${API_ROOT}/getOxyList`,
   auth: () => `${API_ROOT}/signIn`,
+  signUp: () => `${API_ROOT}/signUp`,
 };
 
 export function Capitalize(string) {

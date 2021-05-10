@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { Home, State, Dashboard, Login, Chat } from "./index";
+import { Home, State, Dashboard, Login, Chat, SignUp, Sidebar } from "./index";
 
 class Screen extends Component {
   render() {
     return (
       <Router>
+        <Sidebar />
         <div className="Screen">
           <Switch>
             <Route exact path="/" component={Home} />
@@ -28,6 +29,13 @@ class Screen extends Component {
               path="/login"
               render={(props) => {
                 return <Login {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/SignUp"
+              render={(props) => {
+                return <SignUp {...props} />;
               }}
             />
             <Route

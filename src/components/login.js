@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { startAuthFunction } from "../actions/auth";
 import { connect } from "react-redux";
 class Login extends Component {
@@ -56,6 +56,11 @@ class Login extends Component {
                   onChange={this.changePasswodValue}
                 />
               </div>
+              <div>
+                <Link to="/SignUp">
+                  <span className="SignUPlink">Dont Have An Account</span>
+                </Link>
+              </div>
               <div className="submit-btn">
                 {inProgress == false && (
                   <button
@@ -66,6 +71,7 @@ class Login extends Component {
                     Proceed
                   </button>
                 )}
+
                 {inProgress && (
                   <button type="submit" className="submit-btn1">
                     in Progress

@@ -19,3 +19,8 @@ export const loginFailed = "loginFailed";
 
 export const setAuthenticatedUser = "setAuthenticatedUser";
 export const logoutUser = "logoutUser";
+
+export const beginSignUp = "beginSignUp";
+export const signUpSuccess = "signUpSuccess";
+export const signUpFailed = "signUpFailed";
+export const setSignUpSuccessFalse = "setSignUpSuccessFalse";

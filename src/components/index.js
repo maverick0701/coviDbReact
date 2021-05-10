@@ -23,6 +23,7 @@ import HospitalListDisplay from "./HospitalListDisplay";
 import { getStateData, getCaseTimeSeries } from "../actions/getState";
 import Login from "./login";
 import Chat from "./Chat";
+import SignUp from "./SignUp";
 import OxygenLIst from "./oxygenLIst";
 
 export {
@@ -53,4 +54,5 @@ export {
   OxygenLIst,
   Login,
   Chat,
+  SignUp,
 };

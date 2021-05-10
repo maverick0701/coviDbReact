@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter, Link } from "react-router-dom";
 
 export default class ExpandedSideBar extends Component {
   onHoverOut = () => {
@@ -19,13 +20,28 @@ export default class ExpandedSideBar extends Component {
     let id = setInterval(animate, 1);
   };
   render() {
+    let isLoggedIn = this.props.isLoggedIn;
     return (
       <div className="Expand" id="ExpandedSideBar">
         <div className="Links">
           <div className="Element expandedList">Home</div>
           <div className="Element expandedList">About Us</div>
           <div className="Element expandedList">Trend</div>
-          <div className="Element expandedList">News</div>
+          {isLoggedIn && (
+            <div
+              className="Element expandedList"
+              onClick={this.props.signMeOut}
+            >
+              Sign Out
+            </div>
+          )}
+          {!isLoggedIn && (
+            <div className="Element expandedList">
+              <Link to="/Login" id="LoginLink">
+                Login
+              </Link>
+            </div>
+          )}
           <div className="Element expandedList" onClick={this.onHoverOut}>
             Close
           </div>

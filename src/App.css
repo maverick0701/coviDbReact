@@ -40,6 +40,9 @@ body {
   font-size: 22px;
   cursor: pointer;
 }
+#LoginLink {
+  color: rgb(128, 128, 128);
+}
 #End {
   position: absolute;
   bottom: -6%;
@@ -725,4 +728,20 @@ a:hover {
 .error {
   color: white;
   text-align: center;
+}
+
+.radioSignUp {
+  color: red;
+  margin-right: 20px;
+}
+
+.SignUPlink {
+  color: red;
+  position: relative;
+  left: 24%;
+}
+.SignInlink {
+  color: red;
+  position: relative;
+  left: 34%;
 }

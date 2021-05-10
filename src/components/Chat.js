@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Triage from "./triage";
 import io from "socket.io-client";
-import { Redirect } from "react-router-dom";
+import { Redirect, Router } from "react-router-dom";
 import GroupMultiple from "./GroupMultiple";
 import { connect } from "react-redux";
 import "../chat.css";
+import { CheckAuth } from "../helpers/storage";
 class Chat extends Component {
   constructor(props) {
     super(props);
@@ -83,7 +84,9 @@ class Chat extends Component {
   };
   render() {
     const { typedMessage, messages, type, triage } = this.state;
-    // console.log("render");
+    if (!localStorage.token) {
+      return <Redirect to="/Login" />;
+    }
     return (
       <div>
         <div className="chat-container">
