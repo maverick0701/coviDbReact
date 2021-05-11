@@ -14,7 +14,6 @@ import {
 } from "../actions/setDashboard";
 import DashboardBody from "./DashboardBody";
 import { connect } from "react-redux";
-import { getHospitalList } from "../actions";
 
 class Dashboard extends Component {
   componentDidMount() {

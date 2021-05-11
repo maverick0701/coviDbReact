@@ -52,7 +52,9 @@ class SideSideBar extends Component {
             <FontAwesomeIcon icon={faAddressCard} />
           </div>
           <div className="Element">
-            <FontAwesomeIcon icon={faPoll} />
+            <Link to="/statewise" id="LoginLink">
+              <FontAwesomeIcon icon={faPoll} />
+            </Link>
           </div>
           {isLoggedIn && (
             <div className="Element" onClick={this.signMeOut}>

@@ -24,9 +24,17 @@ export default class ExpandedSideBar extends Component {
     return (
       <div className="Expand" id="ExpandedSideBar">
         <div className="Links">
-          <div className="Element expandedList">Home</div>
+          <div className="Element expandedList">
+            <Link to="/dashboard" id="LoginLink">
+              Home
+            </Link>
+          </div>
           <div className="Element expandedList">About Us</div>
-          <div className="Element expandedList">Trend</div>
+          <div className="Element expandedList">
+            <Link to="/statewise" id="LoginLink">
+              Trend
+            </Link>
+          </div>
           {isLoggedIn && (
             <div
               className="Element expandedList"

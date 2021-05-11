@@ -15,7 +15,8 @@ export default class OxygenLIst extends Component {
               </div>
 
               <div className="TweetBoxBody comment">
-                {elem.description}
+                {elem.title}
+                <div>{elem.district}</div>
                 <div className="footerHos">
                   <div>
                     <FontAwesomeIcon className="phone" icon={faPhone} />
@@ -24,9 +25,9 @@ export default class OxygenLIst extends Component {
                     {/* <FontAwesomeIcon className="phone" icon={faPhone} /> */}
                     <span> </span>
                     <span> </span>
-                    {elem.phone1}
+                    {elem.phone_1}
                   </div>
-                  <div>Verified on : {elem.lastVerifiedOn.split("T")[0]}</div>
+                  <div>Verified on : {elem.last_verified_on}</div>
                 </div>
               </div>
             </div>

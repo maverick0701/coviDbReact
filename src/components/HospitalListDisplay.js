@@ -9,18 +9,19 @@ export default class HospitalListDisplay extends Component {
         {hospitalList.map((hospital) => (
           <div className="tweetBox">
             <div className="TweetBoxHeader stateName ">
-              {hospital.name}
+              {hospital.title}
               <div>{hospital.district}</div>
             </div>
 
             <div className="TweetBoxBody comment">
+              <div>{hospital.address}</div>
               {hospital.comment}
               <div className="footerHos">
                 <div>
                   <FontAwesomeIcon className="phone" icon={faPhone} />
                   <span> </span>
                   <span> </span>
-                  {hospital.phone1}
+                  {hospital.phone_1}
                 </div>
                 {/* <div>Verified on : {hospital.lastVerifiedOn.split("T")[0]}</div> */}
               </div>

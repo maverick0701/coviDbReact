@@ -16,13 +16,19 @@ import { ApiUrls } from "../helpers/Api";
 
 class State extends Component {
   componentDidMount() {
-    let urls = ApiUrls.district_time_series();
-    const { params } = this.props.match;
-    let location = params.location;
+    // const { params } = this.props.match;
+    let location = "Kerala";
     this.props.dispatch(getDistrictWiseData(location));
     this.props.dispatch(getStateTrends(location));
     this.props.dispatch(getSelectedSateBaseNum(location));
   }
+  switchState = (e) => {
+    let location = e.target.value.split("(")[0];
+
+    this.props.dispatch(getDistrictWiseData(location));
+    this.props.dispatch(getStateTrends(location));
+    this.props.dispatch(getSelectedSateBaseNum(location));
+  };
   render() {
     let { whatToDisplay } = this.props.district;
     return (
@@ -30,6 +36,7 @@ class State extends Component {
         <StateDisplay
           district={this.props.district}
           dispatch={this.props.dispatch}
+          switchState={this.switchState}
         />
         {this.props.district && (
           <TopDistric

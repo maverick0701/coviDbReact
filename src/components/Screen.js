@@ -12,7 +12,7 @@ class Screen extends Component {
             <Route exact path="/" component={Home} />
             <Route
               exact
-              path="/statewise/:location"
+              path="/statewise"
               render={(props) => {
                 return <State {...props} />;
               }}

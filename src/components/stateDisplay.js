@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Search } from ".";
 import { ToggleWhatToDisplay } from "../actions/getDistrict";
 import covertNumToDisplay from "../helpers/Form";
+import StateSearch from "./StateSearch.js";
 export default class StateDisplay extends Component {
   toggleDisplatHandler = (whatToDisplay) => {
     this.props.dispatch(ToggleWhatToDisplay(whatToDisplay));
@@ -23,8 +25,7 @@ export default class StateDisplay extends Component {
             <div className="stateInfoCardHeader">
               <div className="stateName">{location}</div>
               <div className="statePopulationNum">
-                <span className="pos">Positive</span>
-                <div className="posNum">159,899</div>
+                <StateSearch onClickFormHandler={this.props.switchState} />
               </div>
             </div>
             <div className="infoCardBody">
