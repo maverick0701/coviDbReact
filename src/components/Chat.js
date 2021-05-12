@@ -21,18 +21,21 @@ class Chat extends Component {
     this.socket = io.connect("http://localhost:5000");
   }
   componentDidUpdate() {
-    let { email, id } = this.props.auth.user;
+    let { email, id, gender, age } = this.props.auth.user;
     if (email) {
-      this.connectionHandler(email, id);
+      this.connectionHandler(email, id, gender, age);
     }
   }
-  connectionHandler = (email, userid) => {
+  connectionHandler = (email, userid, gender, age) => {
     console.log("connection Handler");
     if (email) {
       let self = this;
       this.socket.on("connect", function () {
         self.socket.emit("joinChat", {
           chatRoom: "chatBot" + userid,
+          email,
+          gender,
+          age,
         });
       });
 
@@ -92,7 +95,8 @@ class Chat extends Component {
         <div className="chat-container">
           <div className="chat-header">Chat Bot</div>
           <div className="chat-messages">
-            {type !== "triage" &&
+            {messages !== [] &&
+              type !== "triage" &&
               messages.map((message) => (
                 <GroupMultiple message={message.data} type={type} />
               ))}
