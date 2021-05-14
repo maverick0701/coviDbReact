@@ -25,11 +25,17 @@ class Chat extends Component {
     if (email) {
       this.connectionHandler(email, id, gender, age);
     }
+    this.scrollToBottom();
   }
   connectionHandler = (email, userid, gender, age) => {
     console.log("connection Handler");
     if (email) {
       let self = this;
+      setInterval(function () {
+        self.socket.emit("persistingConnection", {
+          email: email,
+        });
+      }, 1000);
       this.socket.on("connect", function () {
         self.socket.emit("joinChat", {
           chatRoom: "chatBot" + userid,
@@ -50,6 +56,10 @@ class Chat extends Component {
       });
     }
   };
+  scrollToBottom() {
+    let myDiv = document.querySelector(".chat-messages");
+    if (myDiv) myDiv.scrollTop = myDiv.scrollHeight;
+  }
   componentDidMount() {
     let self = this;
     this.socket.on("setQuestion", function (data) {
@@ -87,18 +97,26 @@ class Chat extends Component {
   };
   render() {
     const { typedMessage, messages, type, triage } = this.state;
+    let lastIndex = messages.length;
     if (!localStorage.token) {
       return <Redirect to="/Login" />;
     }
     return (
       <div>
         <div className="chat-container">
-          <div className="chat-header">Chat Bot</div>
+          <div className="chat-header">Triage / Chat Bot</div>
           <div className="chat-messages">
             {messages !== [] &&
               type !== "triage" &&
-              messages.map((message) => (
-                <GroupMultiple message={message.data} type={type} />
+              messages.map((message, index) => (
+                <div>
+                  <GroupMultiple
+                    message={message.data}
+                    type={type}
+                    index={index}
+                    lastIndex={lastIndex - 1}
+                  />
+                </div>
               ))}
             {type === "triage" && (
               <div>
@@ -107,11 +125,6 @@ class Chat extends Component {
             )}
           </div>
           <div className="chat-footer">
-            <input
-              type="text"
-              value={typedMessage}
-              onChange={(e) => this.setState({ typedMessage: e.target.value })}
-            />
             <button onClick={this.handleSubmit}>Submit</button>
           </div>
         </div>

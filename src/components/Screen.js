@@ -40,7 +40,7 @@ class Screen extends Component {
             />
             <Route
               exact
-              path="/Chat"
+              path="/triage"
               render={(props) => {
                 return <Chat {...props} />;
               }}

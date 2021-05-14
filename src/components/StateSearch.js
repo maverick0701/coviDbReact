@@ -18,9 +18,9 @@ export default class StateSearch extends Component {
               <option value="Arunachal Pradesh">Arunachal Pradesh</option>
               <option value="Assam">Assam</option>
               <option value="Bihar">Bihar</option>
-              <option value="Chandigarh (UT)">Chandigarh</option>
+
               <option value="Chhattisgarh">Chhattisgarh</option>
-              <option value="Goa">Goa</option>
+
               <option value="Gujarat">Gujarat</option>
               <option value="Haryana">Haryana</option>
               <option value="Himachal Pradesh">Himachal Pradesh</option>
