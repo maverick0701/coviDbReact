@@ -8,7 +8,7 @@ import {
   toggleWhatToDisplay,
 } from "./index";
 import axios from "axios";
-
+// this is auth
 export function ToggleWhatToDisplay(whatToDisplay) {
   return {
     type: toggleWhatToDisplay,

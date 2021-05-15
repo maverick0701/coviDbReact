@@ -43,7 +43,7 @@ export function setAuthenticatedUserFunction(user) {
     user: user,
   };
 }
-
+// this is auth
 export function startAuthFunction(data) {
   return function (dispatch) {
     dispatch(beginLoginFunction());

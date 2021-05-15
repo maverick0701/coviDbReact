@@ -24,3 +24,5 @@ export const beginSignUp = "beginSignUp";
 export const signUpSuccess = "signUpSuccess";
 export const signUpFailed = "signUpFailed";
 export const setSignUpSuccessFalse = "setSignUpSuccessFalse";
+
+// this is auth
