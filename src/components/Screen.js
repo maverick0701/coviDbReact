@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import { Home, State, Dashboard, Login, Chat, SignUp, Sidebar } from "./index";
+import {
+  Home,
+  State,
+  Dashboard,
+  Login,
+  Chat,
+  SignUp,
+  Sidebar,
+  AboutUs,
+} from "./index";
 
 class Screen extends Component {
   render() {
@@ -43,6 +52,13 @@ class Screen extends Component {
               path="/triage"
               render={(props) => {
                 return <Chat {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/AboutUs"
+              render={(props) => {
+                return <AboutUs {...props} />;
               }}
             />
           </Switch>
