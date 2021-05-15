@@ -29,7 +29,11 @@ export default class ExpandedSideBar extends Component {
               Home
             </Link>
           </div>
-          <div className="Element expandedList">About Us</div>
+          <div className="Element expandedList">
+            <Link to="/AboutUs" id="LoginLink">
+              About US
+            </Link>
+          </div>
           <div className="Element expandedList">
             <Link to="/statewise" id="LoginLink">
               Trend
@@ -43,6 +47,7 @@ export default class ExpandedSideBar extends Component {
               Predictions
             </a>
           </div>
+
           {isLoggedIn && (
             <div
               className="Element expandedList"
