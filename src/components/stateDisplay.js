@@ -7,7 +7,7 @@ export default class StateDisplay extends Component {
   toggleDisplatHandler = (whatToDisplay) => {
     this.props.dispatch(ToggleWhatToDisplay(whatToDisplay));
   };
-
+  //this is
   render() {
     let { location } = this.props.district;
     let Confirmed, Recovered, Active, Deaths;

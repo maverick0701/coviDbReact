@@ -42,7 +42,7 @@ class Login extends Component {
   render() {
     let { inProgress, error, isLoggedIn } = this.props.auth;
     if (isLoggedIn) {
-      return <Redirect to="/Dashboard" />;
+      return <Redirect to="/statewise" />;
     }
     return (
       <div className="container">
