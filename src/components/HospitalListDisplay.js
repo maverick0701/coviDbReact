@@ -32,3 +32,5 @@ export default class HospitalListDisplay extends Component {
     );
   }
 }
+
+//Thiis is bar chart

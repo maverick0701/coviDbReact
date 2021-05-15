@@ -58,3 +58,5 @@ export default class ExpandedSideBar extends Component {
     );
   }
 }
+
+//Thiis is bar chart

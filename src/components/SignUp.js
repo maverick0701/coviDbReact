@@ -180,3 +180,5 @@ function mapStateToProps(state) {
 
 const connectedSignUpComponent = connect(mapStateToProps)(SignUp);
 export default connectedSignUpComponent;
+
+//Thiis is bar chart

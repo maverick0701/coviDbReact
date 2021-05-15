@@ -64,3 +64,5 @@ export default class Search extends Component {
     );
   }
 }
+
+//Thiis is bar chart

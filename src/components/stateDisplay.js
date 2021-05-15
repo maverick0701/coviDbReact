@@ -116,3 +116,5 @@ export default class StateDisplay extends Component {
     );
   }
 }
+
+//Thiis is bar chart

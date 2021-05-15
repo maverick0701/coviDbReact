@@ -16,3 +16,5 @@ export default class GroupMultiple extends Component {
     );
   }
 }
+
+//Thiis is bar chart

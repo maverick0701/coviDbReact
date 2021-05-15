@@ -50,3 +50,4 @@ function mapStateToProps(state) {
 
 const connectedHomeComponent = connect(mapStateToProps)(Home);
 export default connectedHomeComponent;
+//Thiis is bar chart

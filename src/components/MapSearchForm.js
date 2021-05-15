@@ -54,3 +54,5 @@ export default class MapSearchForm extends Component {
     );
   }
 }
+
+//Thiis is bar chart

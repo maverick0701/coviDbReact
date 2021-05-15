@@ -18,3 +18,5 @@ class TableHeader extends Component {
 }
 
 export default TableHeader;
+
+//Thiis is bar chart

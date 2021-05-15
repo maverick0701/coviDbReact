@@ -105,3 +105,5 @@ function mapStateToProps(state) {
 
 const connectedLoginComponent = connect(mapStateToProps)(Login);
 export default connectedLoginComponent;
+
+//Thiis is bar chart

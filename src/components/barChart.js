@@ -48,3 +48,5 @@ export default class barChart extends Component {
     );
   }
 }
+
+//Thiis is bar chart

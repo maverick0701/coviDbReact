@@ -191,3 +191,5 @@ export default class map extends Component {
     );
   }
 }
+
+//Thiis is bar chart

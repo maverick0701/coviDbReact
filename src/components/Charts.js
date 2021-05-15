@@ -92,3 +92,5 @@ export default connectedChartsComponent;
 //     },
 //   },
 // },
+
+//Thiis is bar chart

@@ -53,3 +53,5 @@ export default class ChartStateDisplay extends Component {
     );
   }
 }
+
+//Thiis is bar chart

@@ -28,3 +28,5 @@ export default class chartDisplay extends Component {
     );
   }
 }
+
+//Thiis is bar chart

@@ -19,3 +19,5 @@ export default class triage extends Component {
     );
   }
 }
+
+//Thiis is bar chart

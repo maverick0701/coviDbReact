@@ -2,14 +2,8 @@ import React, { Component } from "react";
 import covertNumToDisplay from "../helpers/Form";
 export default class ContentLeftContent extends Component {
   render() {
-    let {
-      District,
-      Confirmed,
-      whatToDisplay,
-      Recovered,
-      Active,
-      Deceased,
-    } = this.props;
+    let { District, Confirmed, whatToDisplay, Recovered, Active, Deceased } =
+      this.props;
     Confirmed = covertNumToDisplay(Confirmed);
     return (
       <div>
@@ -41,3 +35,5 @@ export default class ContentLeftContent extends Component {
     );
   }
 }
+
+//Thiis is bar chart

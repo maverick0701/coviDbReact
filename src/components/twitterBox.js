@@ -20,3 +20,5 @@ export default class TwitterBox extends Component {
     );
   }
 }
+
+//Thiis is bar chart

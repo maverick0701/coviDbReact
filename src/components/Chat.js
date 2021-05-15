@@ -141,3 +141,5 @@ function mapStateToProps(state) {
 
 const connectedChatComponent = connect(mapStateToProps)(Chat);
 export default connectedChatComponent;
+
+//Thiis is bar chart

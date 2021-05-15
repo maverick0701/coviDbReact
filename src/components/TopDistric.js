@@ -30,3 +30,5 @@ export default class TopDistric extends Component {
     );
   }
 }
+
+//Thiis is bar chart

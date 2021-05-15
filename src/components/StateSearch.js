@@ -54,3 +54,5 @@ export default class StateSearch extends Component {
     );
   }
 }
+
+//Thiis is bar chart

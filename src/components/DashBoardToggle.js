@@ -55,3 +55,5 @@ export default class DashBoardToggle extends Component {
     );
   }
 }
+
+//Thiis is bar chart

@@ -68,3 +68,5 @@ export default class covidInfoBox extends Component {
     );
   }
 }
+
+//Thiis is bar chart

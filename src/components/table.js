@@ -23,3 +23,5 @@ class table extends Component {
 }
 
 export default table;
+
+//Thiis is bar chart

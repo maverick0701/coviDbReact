@@ -9,3 +9,5 @@ export default class Sidebar extends Component {
     );
   }
 }
+
+//Thiis is bar chart

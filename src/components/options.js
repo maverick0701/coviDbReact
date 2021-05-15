@@ -21,3 +21,5 @@ export default class options extends Component {
     );
   }
 }
+
+//Thiis is bar chart

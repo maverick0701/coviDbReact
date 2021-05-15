@@ -17,3 +17,5 @@ export default class DashboardBody extends Component {
     );
   }
 }
+
+//Thiis is bar chart

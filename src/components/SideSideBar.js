@@ -87,3 +87,5 @@ function mapStateToProps(state) {
 }
 const connectedSideBarComponent = connect(mapStateToProps)(SideSideBar);
 export default connectedSideBarComponent;
+
+//Thiis is bar chart

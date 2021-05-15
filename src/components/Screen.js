@@ -53,3 +53,5 @@ class Screen extends Component {
 }
 
 export default Screen;
+
+//Thiis is bar chart
