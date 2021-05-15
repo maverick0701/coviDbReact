@@ -59,3 +59,5 @@ export default function auth(state = intialAuthReducer, action) {
     }
   }
 }
+
+//this is storage

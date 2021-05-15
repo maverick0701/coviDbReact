@@ -8,3 +8,5 @@ export function configureStore() {
   store = createStore(rootReducer, applyMiddleware(thunk, logger));
   return store;
 }
+
+//this is storage

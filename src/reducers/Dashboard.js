@@ -52,3 +52,5 @@ export default function dashboard(state = intialDashboardReducer, action) {
       };
   }
 }
+
+//this is storage

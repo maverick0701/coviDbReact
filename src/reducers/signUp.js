@@ -50,3 +50,5 @@ export default function signUP(state = IntialSignUpReducer, action) {
     }
   }
 }
+
+//this is storage

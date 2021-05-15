@@ -32,3 +32,5 @@ const connectedAppComponent = connect(mapStateToProps)(App);
 export default connectedAppComponent;
 
 // export default App;
+
+// //this is storage

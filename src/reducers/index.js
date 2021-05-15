@@ -11,3 +11,5 @@ export default combineReducers({
   auth,
   signUp,
 });
+
+//this is storage
