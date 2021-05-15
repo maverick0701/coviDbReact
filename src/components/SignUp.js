@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { setSignUp, setsucessFalse } from "../actions/signUp";
+import {
+  checkEmailValidation,
+  checkGenderValidation,
+  validPassAndConfirmPass,
+  checkNameValidation,
+} from "../helpers/validation";
 class SignUp extends Component {
   constructor() {
     super();
@@ -49,10 +55,17 @@ class SignUp extends Component {
   };
   handleSubmitForm = (e) => {
     e.preventDefault();
-    this.props.dispatch(setSignUp(this.state));
-
-    // this.props.dispatch(startAuthFunction(this.state));
-    // console.log(this.state);
+    let permit;
+    let validateEmail = checkEmailValidation(this.state.email);
+    let validatePass = validPassAndConfirmPass(
+      this.state.password,
+      this.state.confirmPassword
+    );
+    let validateName = checkNameValidation(this.state.name);
+    let validateSex = checkGenderValidation(this.state.gender);
+    permit = validateEmail && validateName && validatePass && validateSex;
+    console.log(permit);
+    if (permit) this.props.dispatch(setSignUp(this.state));
   };
   componentWillUnmount() {
     this.props.dispatch(setsucessFalse());

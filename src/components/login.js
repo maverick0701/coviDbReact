@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { startAuthFunction } from "../actions/auth";
 import { connect } from "react-redux";
+import {
+  checkEmailValidation,
+  checkPasswordValidation,
+} from "../helpers/validation";
 class Login extends Component {
   constructor() {
     super();
@@ -24,7 +28,14 @@ class Login extends Component {
   };
   handleSubmitForm = (e) => {
     e.preventDefault();
-    this.props.dispatch(startAuthFunction(this.state));
+    let validateEmail = checkEmailValidation(this.state.email);
+    let validatePassword = checkPasswordValidation(this.state.password);
+    let proceed = validateEmail && validatePassword;
+    if (proceed) {
+      this.props.dispatch(startAuthFunction(this.state));
+    }
+
+    //
     // console.log(this.state);
   };
 
