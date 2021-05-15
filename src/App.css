@@ -808,7 +808,7 @@ a:hover {
   top: 6%;
   left: 5%;
 }
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Poppins:wght@200&display=swap");
 #AboutUsBox {
   /* border: 2px solid white; */
   height: 760px;
@@ -818,7 +818,8 @@ a:hover {
   width: 50%;
   color: #057bfe;
   font-family: "Josefin Sans", sans-serif;
-  text-align: justify;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
 }
 .ques {
   color: red;
