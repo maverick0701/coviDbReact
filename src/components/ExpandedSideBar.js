@@ -35,6 +35,14 @@ export default class ExpandedSideBar extends Component {
               Trend
             </Link>
           </div>
+          <div className="Element expandedList">
+            <a
+              href="https://covid19vaccinationprediction.herokuapp.com/"
+              id="LoginLink"
+            >
+              Predictions
+            </a>
+          </div>
           {isLoggedIn && (
             <div
               className="Element expandedList"
