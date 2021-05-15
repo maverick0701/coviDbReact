@@ -48,3 +48,5 @@ export function validPassAndConfirmPass(password, conirmPassword) {
     return true;
   }
 }
+
+//this is validation
