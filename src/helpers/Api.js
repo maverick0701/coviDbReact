@@ -1,4 +1,4 @@
-const API_ROOT = "http://54.82.41.39:8000";
+const API_ROOT = "http://projcovi.com";
 function locationsMapedToApi(location) {
   if (location === "India") return `${API_ROOT}/getIndiaSeriesData`;
   else return `${API_ROOT}/getStateSeriesData`;
