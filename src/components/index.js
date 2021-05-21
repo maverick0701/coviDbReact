@@ -26,6 +26,7 @@ import Chat from "./Chat";
 import SignUp from "./SignUp";
 import OxygenLIst from "./oxygenLIst";
 import AboutUs from "./AboutUs";
+import userProfile from "./userProfile";
 export {
   Sidebar,
   Screen,
@@ -56,5 +57,6 @@ export {
   Chat,
   SignUp,
   AboutUs,
+  userProfile,
 };
 //Thiis is bar chart

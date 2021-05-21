@@ -56,10 +56,10 @@ export default class covidInfoBox extends Component {
         <div className="CovidInfoBox box4">
           <div className="CovidInfoBoxHeader">
             <div className="CovidInfoBoxTitle">Case Fatality Ratio</div>
-            <div className="CovidInfoBoxNumber ">{caseFatalityRatio}</div>
-            <div className="CovidInfoBoxTitle ">India has 13,495.9 CPM</div>
+            <div className="CovidInfoBoxNumber" id="magicbox4">{caseFatalityRatio}</div>
+            <div className="CovidInfoBoxTitle box4Title">India has 13,495.9 CPM</div>
           </div>
-          <div className="CovidInfoBoxBody ">
+          <div className="CovidInfoBoxBody" id="magicbox4">
             For every 100 confirmed cases, ~{caseFatalityRatio} have
             unfortunately passed away from the virus.
           </div>

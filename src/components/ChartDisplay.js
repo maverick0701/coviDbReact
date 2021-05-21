@@ -17,7 +17,7 @@ export default class chartDisplay extends Component {
                   label: title,
                   data: data,
                   fill: false,
-                  borderColor: "rgb(75, 192, 192)",
+                  borderColor: "#057bfe",
                   tension: 0.1,
                 },
               ],

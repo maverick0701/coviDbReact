@@ -5,7 +5,7 @@ import { Redirect, Router } from "react-router-dom";
 import GroupMultiple from "./GroupMultiple";
 import { connect } from "react-redux";
 import "../chat.css";
-import { CheckAuth } from "../helpers/storage";
+
 class Chat extends Component {
   constructor(props) {
     super(props);
@@ -18,24 +18,26 @@ class Chat extends Component {
       type: "",
       triage: {},
     };
-    this.socket = io.connect("http://localhost:5000");
+
+    this.socket = io.connect("http://54.82.41.39:5000", {
+      reconnection: true,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
+      reconnectionAttempts: Infinity,
+    });
   }
   componentDidUpdate() {
     let { email, id, gender, age } = this.props.auth.user;
     if (email) {
       this.connectionHandler(email, id, gender, age);
     }
+    console.log("this is cmpdu");
     this.scrollToBottom();
   }
   connectionHandler = (email, userid, gender, age) => {
     console.log("connection Handler");
     if (email) {
       let self = this;
-      setInterval(function () {
-        self.socket.emit("persistingConnection", {
-          email: email,
-        });
-      }, 1000);
       this.socket.on("connect", function () {
         self.socket.emit("joinChat", {
           chatRoom: "chatBot" + userid,
@@ -63,7 +65,6 @@ class Chat extends Component {
   componentDidMount() {
     let self = this;
     this.socket.on("setQuestion", function (data) {
-      console.log("setQuestion");
       let messages = self.state.messages;
       messages.push(data);
       self.setState({
@@ -77,6 +78,10 @@ class Chat extends Component {
         type: data.type,
       });
     });
+    let { email, id, gender, age } = this.props.auth.user;
+    if (email) {
+      this.connectionHandler(email, id, gender, age);
+    }
   }
 
   handleSubmit = (e) => {

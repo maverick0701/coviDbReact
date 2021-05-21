@@ -34,23 +34,14 @@ export default class ExpandedSideBar extends Component {
               About US
             </Link>
           </div>
-          <div className="Element expandedList">
+          <div className="Element expandedList trnd">
             <Link to="/statewise" id="LoginLink">
               Trend
             </Link>
           </div>
-          <div className="Element expandedList">
-            <a
-              href="https://covid19vaccinationprediction.herokuapp.com/"
-              id="LoginLink"
-            >
-              Predictions
-            </a>
-          </div>
-
           {isLoggedIn && (
             <div
-              className="Element expandedList"
+              className="Element expandedList sgnout"
               onClick={this.props.signMeOut}
             >
               Sign Out
@@ -63,6 +54,25 @@ export default class ExpandedSideBar extends Component {
               </Link>
             </div>
           )}
+          <div className="Element expandedList prd">
+            <a
+              href="https://covid19vaccinationprediction.herokuapp.com/"
+              id="LoginLink"
+              target="_blank"
+            >
+              Predictions
+            </a>
+          </div>
+          <div className="Element expandedList tri">
+            <Link to="/triage" id="LoginLink">
+              Triage
+            </Link>
+          </div>
+          <div className="Element expandedList tri">
+            <Link to="/profile" id="LoginLink">
+              Profile
+            </Link>
+          </div>
           <div className="Element expandedList" onClick={this.onHoverOut}>
             Close
           </div>

@@ -93,7 +93,7 @@ export default class StateDisplay extends Component {
                   className="contentBody"
                   onClick={() => this.toggleDisplatHandler("Deceased")}
                 >
-                  <div className="title">Diseased</div>
+                  <div className="title deadman">Deceased</div>
                   <div className="number">{Deaths}</div>
                   <div className="graph">
                     <svg>

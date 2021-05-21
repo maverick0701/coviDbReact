@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 import {
   Charts,
   Table,
@@ -22,6 +23,7 @@ class Home extends Component {
       keys = ["State", "Confirmed", "Recovered", "Deaths", "Active"];
       keys.pop();
     }
+    return <Redirect to="/Dashboard" />
     return (
       <div>
         <div id="tableScreen">

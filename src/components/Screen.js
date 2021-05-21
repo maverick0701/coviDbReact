@@ -9,6 +9,7 @@ import {
   SignUp,
   Sidebar,
   AboutUs,
+  userProfile as UserProfile,
 } from "./index";
 
 class Screen extends Component {
@@ -59,6 +60,13 @@ class Screen extends Component {
               path="/AboutUs"
               render={(props) => {
                 return <AboutUs {...props} />;
+              }}
+            />
+            <Route
+              exact
+              path="/profile"
+              render={(props) => {
+                return <UserProfile {...props} />;
               }}
             />
           </Switch>

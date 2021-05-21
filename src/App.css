@@ -3,9 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Indie+Flower&family=Karantina&family=Source+Code+Pro:ital,wght@0,200;1,200&display=swap");
 :root {
   --navColor: #1e1e30;
-  --backColor: #161726;
+  --backColor: #161625;
   --fontColor1: white;
-  --fontFam1: "Open Sans Condensed", sans-serif;
+  --fontFam1: "Poppins", sans-serif;
 }
 body {
   background-color: var(--backColor);
@@ -39,17 +39,32 @@ body {
   color: rgb(128, 128, 128);
   font-size: 22px;
   cursor: pointer;
+  /* border: 1px solid red; */
+}
+.trnd {
+  /* margin-top: -10px; */
+}
+.sgnout {
+  /* margin-top: -14px; */
+}
+.prd {
+  /* margin-top: -8px; */
+}
+.tri {
+  /* margin-top: -5px; */
 }
 #LoginLink {
   color: rgb(128, 128, 128);
+  /* border: 1px solid red; */
 }
 #End {
   position: absolute;
-  bottom: -6%;
+  bottom: -2%;
   left: 30%;
 }
 #Globe {
   font-size: 30px;
+  
 }
 
 .Expand {
@@ -176,8 +191,13 @@ path {
   height: 75vh;
   overflow: scroll;
   width: 40%;
+  /* border: 1px solid red; */
 }
-
+.chartBox {
+  margin-top: 20px;
+  /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); */
+  /* border: 1px solid red !important; */
+}
 .stateDisplay {
   /* border: 2px solid white; */
   height: 90vh;
@@ -205,7 +225,8 @@ path {
   /* border: 2px solid white; */
   font-size: 42px;
   color: #e23028;
-  font-family: "Karantina", cursive;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
 }
 .statePopulationNum {
   text-align: right;
@@ -213,8 +234,7 @@ path {
   /* border: 2px solid white; */
 
   color: #9673b9;
-  font-family: "Karantina", cursive;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Poppins", sans-serif;
 }
 .pos {
   font-size: 10px;
@@ -241,6 +261,7 @@ path {
 }
 .title {
   font-family: "Karantina", cursive;
+  font-weight: 100;
   color: white;
   /* border: 2px solid white; */
   position: absolute;
@@ -253,10 +274,7 @@ path {
   position: absolute;
   top: 50%;
   left: 15%;
-  font-family: "Crimson Text", serif;
-  font-family: "Indie Flower", cursive;
-  font-family: "Karantina", cursive;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: #f70c3a;
 }
@@ -281,13 +299,17 @@ path {
   min-height: 200px;
   width: 40vw;
   position: absolute;
-  left: 56%;
+  left: 53%;
   top: 5%;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 10px 15px;
 }
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 .TopDistrictTitle {
-  color: #28a745;
-  font-family: "Orelega One", cursive;
+  color: #0E419A;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
   /* border: 2px solid white; */
   width: 30%;
   font-size: 22px;
@@ -309,18 +331,18 @@ path {
   display: flex;
   flex-direction: row;
   font-size: large;
-  color: #6c757d;
+  color: #fff;
   margin-top: 22px;
   position: relative;
 }
 .numberLeft {
   width: 28%;
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .place {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
   position: absolute;
   left: 50%;
@@ -355,9 +377,11 @@ path {
   margin-bottom: 20px;
   /* border: 2px solid white; */
   border-radius: 10px;
-  color: #a31b34;
+  color: #CC050A;
   position: relative;
-  background-color: #341a27 !important;
+  background-color: #331427 !important;
+  font-weight: bold;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.6);
 }
 
 .CovidInfoBoxHeader {
@@ -367,16 +391,17 @@ path {
   position: absolute;
   top: 10%;
   left: 6%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 13px;
+  font-weight: bold;
 }
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=New+Tegomin&display=swap");
 
 .CovidInfoBoxNumber {
-  color: #aa1b33 !important;
+  color: #aa1b33;
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "New Tegomin", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
 }
 
 .CovidInfoBoxBody {
@@ -385,19 +410,21 @@ path {
   top: 49%;
   left: 6%;
   width: 90%;
-  font-family: "Montserrat", sans-serif;
-  color: #e23028 !important;
+  font-family: "Poppins", sans-serif;
+  color: #e23028;
+  font-weight: bold;
 }
 .box2 {
-  background-color: #171e32 !important;
-  color: #18488e !important;
+  background-color: #151D33 !important;
+  color: #0E419A !important;
 }
 .box3 {
-  background-color: #1a2829 !important;
-  color: #27753b;
+  background-color:#182829 !important;
+  color: #227439;
 }
 .box4 {
-  background-color: #241142 !important;
+  background-color: #230F41 !important;
+  color: #775899 !important;
 }
 
 .box2Num {
@@ -416,15 +443,26 @@ path {
 .box3Title {
   width: 100%;
 }
+.CovidInfoBoxTitle {
+  font-weight: 900;
+}
+.box4Title, #magicbox4 {
+  color: #775899;
+}
 
 .chartStateDisplay {
   /* border: 2px solid white; */
-  height: 400px;
+  height: 300px;
+  padding: 20px;
   width: 40%;
   position: absolute;
   top: 42%;
   right: 2%;
   overflow: scroll;
+  margin-top: 100px;
+  border-radius: 20px;
+  /* box-shadow: 2px 2px 4px rgba(0,0,0,0.6); */
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.6);
 }
 
 .headerSearch {
@@ -479,7 +517,9 @@ path {
   height: 50px;
   display: flex;
   flex-direction: row;
-
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  /* color: pink; */
   color: white;
 }
 .tab {
@@ -531,6 +571,7 @@ path {
   left: 2%;
   /* border: 4px solid white; */
   height: 40px;
+  
   width: 94%;
 }
 .DashboardBodyRenderPart {
@@ -543,13 +584,16 @@ path {
   position: absolute;
   top: 10%;
   overflow-y: scroll;
+  margin-top: 15px;
   /* border-top: 0px; */
 }
 
 .tweetBox {
   /* border: 2px solid white; */
-  height: 150px;
-  width: 98%;
+  height: fit-content;
+  /* width: fit-content; */
+  width: 97%;
+  overflow-wrap: break-word;
   margin-top: 30px;
   /* border-radius: 20px; */
   /* background-color: #341a27 !important; */
@@ -570,7 +614,7 @@ path {
   padding: 10px;
 }
 .hashTags {
-  height: 18px;
+  height: fit-content;
   font-size: 15px;
   width: 100%;
   /* border: 2px solid white; */
@@ -608,7 +652,9 @@ a {
   width: 250px;
   /* border: 2px solid white; */
 }
-
+select:focus {
+  outline: none !important;
+}
 .sBox .form select {
   background-color: #1f2a37;
   color: white;
@@ -626,6 +672,8 @@ a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
 }
 .outer-wrapper {
   margin: auto;
@@ -638,14 +686,16 @@ a {
   height: fit-content;
   border-radius: 20px;
   background: inherit;
-  box-shadow: 11px 11px 20px #0a0a0e, -11px -11px 20px #0d0b0b;
+  /* box-shadow: 11px 11px 20px #0a0a0e, -11px -11px 20px #0d0b0b; */
 }
 .form-head {
-  margin: 10px;
-  padding: 10px;
+  /* margin: 10px; */
+  /* padding: 10px; */
   text-align: center;
-  font-size: 22px;
+  font-size: 30px;
   color: rgb(253, 24, 70);
+  font-family: "poppins";
+  font-weight: 900;
 }
 .form-inp {
   margin: 10px;
@@ -654,9 +704,9 @@ a {
   justify-content: center;
 }
 .eml {
-  height: 30px;
+  height: 10px;
   width: 100%;
-  font-size: 1.2vw;
+  font-size: 18px;
   border: none;
   border-radius: 10px;
   background: inherit;
@@ -675,6 +725,10 @@ input[type="password"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "poppins";
+}
+button:hover {
+  border: 2px solid rgb(253, 24, 70);
 }
 button {
   margin: 10px 0px;
@@ -687,6 +741,7 @@ button {
   /* box-shadow: 9px 9px 17px #161726, -9px -9px 17px #ffffff; */
   color: rgb(253, 24, 70);
   font-size: 16px;
+  transition: 0.5s all ease-in-out;
 }
 button:focus {
   outline: none !important;
@@ -732,13 +787,16 @@ a:hover {
 
 .radioSignUp {
   color: red;
+  /* font-family: "poppins"; */
   margin-right: 20px;
 }
 
 .SignUPlink {
   color: red;
   position: relative;
-  left: 24%;
+  left: 26%;
+  /* transform: translate(-50%); */
+  /* margin: 0px 0px 20px 0px; */
 }
 .SignInlink {
   color: red;
@@ -817,11 +875,22 @@ a:hover {
   top: 5%;
   width: 50%;
   color: #057bfe;
-  font-family: "Josefin Sans", sans-serif;
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 18px;
 }
 .ques {
   color: red;
 }
 /* //this is storage */
+.deadman {
+  /* border: 1px solid red !important; */
+  position: relative;
+  left: 10%;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+#vaccine {
+  color: #808080 !important;
+}

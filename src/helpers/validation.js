@@ -31,6 +31,14 @@ export function checkPasswordValidation(password) {
   }
 }
 
+export function checkAgeValidation(password) {
+  if (password === "" || password === " ") {
+    toast.error("Oops! Please Enter A Valid Age");
+    return false;
+  } else {
+    return true;
+  }
+}
 export function checkNameValidation(name) {
   if (name === "" || name === " ") {
     toast.error("Oops! Please Enter A Valid Name");

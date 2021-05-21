@@ -1,4 +1,4 @@
-const API_ROOT = "http://localhost:8000";
+const API_ROOT = "http://54.82.41.39:8000";
 function locationsMapedToApi(location) {
   if (location === "India") return `${API_ROOT}/getIndiaSeriesData`;
   else return `${API_ROOT}/getStateSeriesData`;
@@ -13,6 +13,7 @@ export const ApiUrls = {
   get_oxy_list: () => `${API_ROOT}/getOxyList`,
   auth: () => `${API_ROOT}/signIn`,
   signUp: () => `${API_ROOT}/signUp`,
+  profile: () => `${API_ROOT}/profile`,
 };
 
 export function Capitalize(string) {

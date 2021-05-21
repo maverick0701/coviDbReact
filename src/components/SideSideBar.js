@@ -4,7 +4,9 @@ import {
   faAddressCard,
   faPoll,
   faSignOutAlt,
-  faGlobe,
+  faSyringe,
+  faUserMd,
+  faChartBar,
   faHome,
   faDatabase,
   faSignInAlt,
@@ -46,10 +48,12 @@ class SideSideBar extends Component {
         </div>
         <div className="Links" onMouseOver={this.onHover}>
           <div className="Element">
-            <FontAwesomeIcon icon={faHome} />
+          <Link to="/Dashboard" id="LoginLink"><FontAwesomeIcon icon={faHome} />
+          </Link>  
           </div>
           <div className="Element">
-            <FontAwesomeIcon icon={faAddressCard} />
+          <Link to="/AboutUs" id="LoginLink"><FontAwesomeIcon icon={faAddressCard} />
+          </Link>
           </div>
           <div className="Element">
             <Link to="/statewise" id="LoginLink">
@@ -68,10 +72,19 @@ class SideSideBar extends Component {
               </Link>
             </div>
           )}
+          <div className="Element">
+          <a id="vaccine" target="_blank" href="https://covid19vaccinationprediction.herokuapp.com/"><FontAwesomeIcon icon={faChartBar} />
+          </a>
+          </div>
+          <div className="Element">
+          <Link to="/triage" id="LoginLink"><FontAwesomeIcon icon={faUserMd} />
+          </Link>
+          </div>
         </div>
+        
         <div id="End">
           <div className="Element" id="Globe">
-            <FontAwesomeIcon icon={faGlobe} />
+            <a id="vaccine" target="_blank" href="https://www.cowin.gov.in/home"><FontAwesomeIcon icon={faSyringe} /></a>
           </div>
         </div>
         <ExpandedSideBar isLoggedIn={isLoggedIn} signMeOut={this.signMeOut} />
