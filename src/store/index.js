@@ -5,7 +5,7 @@ import thunk from "redux-thunk";
 let store;
 
 export function configureStore() {
-  store = createStore(rootReducer, applyMiddleware(thunk, logger));
+  store = createStore(rootReducer, applyMiddleware(thunk));
   return store;
 }
 
