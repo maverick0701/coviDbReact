@@ -18,7 +18,8 @@ export default class HospitalListDisplay extends Component {
               {hospital.comment}
               <div className="footerHos">
                 <div>
-                  <FontAwesomeIcon className="phone" icon={faPhone} />
+                  Contact:
+                  {/* <FontAwesomeIcon className="phone" icon={faPhone} /> */}
                   <span> </span>
                   <span> </span>
                   {hospital.phone_1}

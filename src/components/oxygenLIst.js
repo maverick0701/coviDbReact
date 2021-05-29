@@ -19,7 +19,8 @@ export default class OxygenLIst extends Component {
                 <div>{elem.district}</div>
                 <div className="footerHos">
                   <div>
-                    <FontAwesomeIcon className="phone" icon={faPhone} />
+                    Contact:
+                    {/* <FontAwesomeIcon className="phone" icon={faPhone} /> */}
                     <span> </span>
                     <span> </span>
                     {/* <FontAwesomeIcon className="phone" icon={faPhone} /> */}
