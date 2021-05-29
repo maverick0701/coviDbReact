@@ -8,7 +8,14 @@
   --fontFam1: "Poppins", sans-serif;
 }
 body {
-  background-color: var(--backColor);
+  cursor: cell;
+  background-color: #002A4A;
+  padding: 0%;
+  margin: 0%;
+  /* border: 1px solid red; */
+  /* background: linear-gradient(180deg, #002A4A, #02121F); */
+  /* background-size: cover; */
+  /* height: 120vh; */
 }
 
 .Sidebar {
@@ -157,7 +164,8 @@ body {
 }
 path {
   /* fill: aliceblue; */
-  stroke: white;
+  /* stroke: white; */
+  display: none;
 }
 
 .map {
@@ -208,7 +216,7 @@ path {
 
 .stateInfoCard {
   /* border: 2px solid white; */
-  height: 40vh;
+  height: fit-content;
   width: 35vw;
   position: absolute;
   top: 5%;
@@ -224,7 +232,7 @@ path {
   width: 60%;
   /* border: 2px solid white; */
   font-size: 42px;
-  color: #e23028;
+  color: whitesmoke;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
 }
@@ -281,6 +289,7 @@ path {
 
 .graph {
   position: absolute;
+  /* border: 1px solid red; */
   top: 70%;
 }
 .posNum {
@@ -307,7 +316,7 @@ path {
 }
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
 .TopDistrictTitle {
-  color: #0E419A;
+  color: whitesmoke;
   font-weight: 900;
   font-family: "Poppins", sans-serif;
   /* border: 2px solid white; */
@@ -364,15 +373,18 @@ path {
   width: 45%;
   position: absolute;
   top: 40%;
-  left: 4%;
+  left: 2%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: -70px;
+  /* border: 1px solid red; */
 }
 
 .CovidInfoBox {
+  padding: 20px;
   width: 220px;
-  height: 47%;
+  height: 50%;
   margin-left: 45px;
   margin-bottom: 20px;
   /* border: 2px solid white; */
@@ -457,10 +469,12 @@ path {
   width: 40%;
   position: absolute;
   top: 42%;
-  right: 2%;
+  right: 1%;
   overflow: scroll;
   margin-top: 100px;
   border-radius: 20px;
+  /* border: 1px solid red; */
+  /* padding: 70px; */
   /* box-shadow: 2px 2px 4px rgba(0,0,0,0.6); */
   box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.6);
 }
@@ -550,7 +564,7 @@ path {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 0px;
   border-bottom: 0px;
-  color: #057bfe;
+  color: #4081A7;
 }
 
 .DashboardBody {
@@ -597,7 +611,9 @@ path {
   margin-top: 30px;
   /* border-radius: 20px; */
   /* background-color: #341a27 !important; */
-  background-color: #171e32 !important;
+  background-color: #02121F !important;
+  padding: 10px;
+  border-radius: 10px;
   color: white;
 }
 .TweetBoxHeader {
@@ -606,6 +622,7 @@ path {
   padding: 10px;
   /* box-sizing: border-box; */
   font-size: 20px !important;
+  color: #057bfe;
 }
 .TweetBoxBody {
   /* border: 2px solid white; */
@@ -614,6 +631,7 @@ path {
   padding: 10px;
 }
 .hashTags {
+  color: #0E419A;
   height: fit-content;
   font-size: 15px;
   width: 100%;
@@ -632,11 +650,12 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
-  color: orangered;
+  color: #4081A7;
   top: 40%;
   justify-content: space-between;
 }
 .phone {
+  color: whitesmoke;
   margin-right: 13px;
 }
 
@@ -693,7 +712,7 @@ select:focus {
   /* padding: 10px; */
   text-align: center;
   font-size: 30px;
-  color: rgb(253, 24, 70);
+  color: #4081A7;
   font-family: "poppins";
   font-weight: 900;
 }
@@ -728,7 +747,7 @@ input[type="password"]:focus {
   font-family: "poppins";
 }
 button:hover {
-  border: 2px solid rgb(253, 24, 70);
+  border: 2px solid #0E419A;
 }
 button {
   margin: 10px 0px;
@@ -739,7 +758,7 @@ button {
   width: 100px;
   border: 2px solid white;
   /* box-shadow: 9px 9px 17px #161726, -9px -9px 17px #ffffff; */
-  color: rgb(253, 24, 70);
+  color: whitesmoke;
   font-size: 16px;
   transition: 0.5s all ease-in-out;
 }
@@ -786,20 +805,20 @@ a:hover {
 }
 
 .radioSignUp {
-  color: red;
+  color: whitesmoke;
   /* font-family: "poppins"; */
   margin-right: 20px;
 }
 
 .SignUPlink {
-  color: red;
+  color: #4081A7;
   position: relative;
   left: 26%;
   /* transform: translate(-50%); */
   /* margin: 0px 0px 20px 0px; */
 }
 .SignInlink {
-  color: red;
+  color: #4081A7;
   position: relative;
   left: 34%;
 }
@@ -862,6 +881,7 @@ a:hover {
 }
 
 .posHead {
+  color: whitesmoke;
   position: relative;
   top: 6%;
   left: 5%;
@@ -874,12 +894,12 @@ a:hover {
   left: 20%;
   top: 5%;
   width: 50%;
-  color: #057bfe;
+  color: whitesmoke;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
 .ques {
-  color: red;
+  color: #057bfe;
 }
 /* //this is storage */
 .deadman {

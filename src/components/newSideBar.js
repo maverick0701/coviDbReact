@@ -31,6 +31,9 @@ class newSideBar extends React.Component {
                 <div className="link">Trends</div>
               </Link>
             </a>
+            <a target="_blank" href="https://covid19vaccinationprediction.herokuapp.com/">
+              <div className="link">Vaccination Predictor</div>
+            </a>
             <a href="#third">
               <Link to="/AboutUs">
                 <div className="link">About Us</div>
@@ -55,7 +58,7 @@ class newSideBar extends React.Component {
           </div>
 
           <div className="social">
-            <a href="">
+            <a href="https://github.com/javaBeans-VIT">
               <div className="link">GitHub</div>
             </a>
           </div>
