@@ -11,12 +11,13 @@ import {
   AboutUs,
   userProfile as UserProfile,
 } from "./index";
-
+import { Hamburger } from "./hamburger";
 class Screen extends Component {
   render() {
     return (
       <Router>
-        <Sidebar />
+        {/* <Sidebar /> */}
+        <Hamburger />
         <div className="Screen">
           <Switch>
             <Route exact path="/" component={Home} />

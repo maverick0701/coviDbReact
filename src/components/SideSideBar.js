@@ -48,12 +48,14 @@ class SideSideBar extends Component {
         </div>
         <div className="Links" onMouseOver={this.onHover}>
           <div className="Element">
-          <Link to="/Dashboard" id="LoginLink"><FontAwesomeIcon icon={faHome} />
-          </Link>  
+            <Link to="/Dashboard" id="LoginLink">
+              <FontAwesomeIcon icon={faHome} />
+            </Link>
           </div>
           <div className="Element">
-          <Link to="/AboutUs" id="LoginLink"><FontAwesomeIcon icon={faAddressCard} />
-          </Link>
+            <Link to="/AboutUs" id="LoginLink">
+              <FontAwesomeIcon icon={faAddressCard} />
+            </Link>
           </div>
           <div className="Element">
             <Link to="/statewise" id="LoginLink">
@@ -73,18 +75,30 @@ class SideSideBar extends Component {
             </div>
           )}
           <div className="Element">
-          <a id="vaccine" target="_blank" href="https://covid19vaccinationprediction.herokuapp.com/"><FontAwesomeIcon icon={faChartBar} />
-          </a>
+            <a
+              id="vaccine"
+              target="_blank"
+              href="https://covid19vaccinationprediction.herokuapp.com/"
+            >
+              <FontAwesomeIcon icon={faChartBar} />
+            </a>
           </div>
           <div className="Element">
-          <Link to="/triage" id="LoginLink"><FontAwesomeIcon icon={faUserMd} />
-          </Link>
+            <Link to="/triage" id="LoginLink">
+              <FontAwesomeIcon icon={faUserMd} />
+            </Link>
           </div>
         </div>
-        
+
         <div id="End">
           <div className="Element" id="Globe">
-            <a id="vaccine" target="_blank" href="https://www.cowin.gov.in/home"><FontAwesomeIcon icon={faSyringe} /></a>
+            <a
+              id="vaccine"
+              target="_blank"
+              href="https://www.cowin.gov.in/home"
+            >
+              <FontAwesomeIcon icon={faSyringe} />
+            </a>
           </div>
         </div>
         <ExpandedSideBar isLoggedIn={isLoggedIn} signMeOut={this.signMeOut} />
@@ -100,5 +114,3 @@ function mapStateToProps(state) {
 }
 const connectedSideBarComponent = connect(mapStateToProps)(SideSideBar);
 export default connectedSideBarComponent;
-
-//Thiis is bar chart

@@ -14,6 +14,7 @@ import {
 } from "../actions/setDashboard";
 import DashboardBody from "./DashboardBody";
 import { connect } from "react-redux";
+import { Redirect } from "react-router";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -51,7 +52,9 @@ class Dashboard extends Component {
     if (this.props.oxyList) {
       oxyList = this.props.oxyList;
     }
-
+    if (!localStorage.token) {
+      return <Redirect to="/Login" />;
+    }
     // console.log(tweets, "****");
     return (
       <div>
